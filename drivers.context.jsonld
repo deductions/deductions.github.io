@@ -1,0 +1,33 @@
+[ "@context": {
+      "long": "//www.w3.org/2003/01/geo/wgs84_pos#long",
+      "lat": "//www.w3.org/2003/01/geo/wgs84_pos#lat",
+
+      "Person": "http://xmlns.com/foaf/0.1/Person",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "name": "http://xmlns.com/foaf/0.1/name",
+      "img": {
+         "@id": "http://xmlns.com/foaf/0.1/img",
+         "@type": "@id"
+      },
+      "mbox": {
+         "@id": "http://xmlns.com/foaf/0.1/mbox",
+         "@type": "@id"
+      },
+      "familyName": "http://xmlns.com/foaf/0.1/familyName",
+      "givenName": "http://xmlns.com/foaf/0.1/givenName",
+      "gender": "http://schema.org/gender",
+      "homepage":
+      {
+         "@id": "http://xmlns.com/foaf/0.1/homepage",
+         "@type": "@id"
+      },
+      "nationality": "http://schema.org/nationality",
+      "telephone": "http://schema.org/telephone",
+      "Address": "http://www.w3.org/2006/vcard/ns#Address",
+      "address": "http://www.w3.org/2006/vcard/ns#address",
+      "street": "http://www.w3.org/2006/vcard/ns#street-address",
+      "locality": "http://www.w3.org/2006/vcard/ns#locality",
+      "region": "http://www.w3.org/2006/vcard/ns#region",
+      "country": "http://www.w3.org/2006/vcard/ns#country",
+      "postalCode": "http://www.w3.org/2006/vcard/ns#postal-code"
+} ]
