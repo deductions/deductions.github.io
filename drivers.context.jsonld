@@ -1,6 +1,6 @@
 [ "@context": {
-      "long": "//www.w3.org/2003/01/geo/wgs84_pos#long",
-      "lat": "//www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
 
       "Person": "http://xmlns.com/foaf/0.1/Person",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
