@@ -1,4 +1,4 @@
-[ "@context": {
+{ "@context": {
       "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
       "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
 
@@ -30,4 +30,4 @@
       "region": "http://www.w3.org/2006/vcard/ns#region",
       "country": "http://www.w3.org/2006/vcard/ns#country",
       "postalCode": "http://www.w3.org/2006/vcard/ns#postal-code"
-} ]
+} }
