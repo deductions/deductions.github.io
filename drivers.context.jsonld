@@ -1,10 +1,57 @@
 { "@context": {
-      "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
-      "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+      "long": "geo:long",
+      "lat": "geo:lat",
 
+    "driver": "http://deductions.github.io/drivers.owl.ttl#",
+      "RideEnquiry": "driver:RideEnquiry",
+      "from":  {
+        "@id": "driver:from",
+        "@type": "@id"
+      },
+      "departure": {
+        "@id": "driver:departure",
+        "@type": "@id"
+      },
+      "destination": {
+        "@id": "driver:destination",
+        "@type": "@id"
+      },
+      "vehiculeType": {
+        "@id": "driver:vehiculeType",
+        "@type": "@id"
+      },
+      "passengerID": {
+        "@id":  "driver:passengerID",
+        "@type": "@id"
+      },
+      "datetime": "driver:datetime",
+      "expectedDuration": "driver:expectedDuration",
+      "expectedDistance": "driver:expectedDistance",
+      "price": "driver:price",
+      "serviceStartedBy":  {
+        "@id": "driver:serviceStartedBy",
+        "@type": "@id"
+      },
+      "sameLocationAs": {
+        "@id": "driver:sameLocationAs",
+        "@type": "@id"
+      },
+      "latenessExpected": "driver:latenessExpected",
+      "serviceEndedBy": {
+        "@id": "driver:serviceEndedBy",
+        "@type": "@id"
+      },
+      "serviceRefusedBy": {
+        "@id": "driver:serviceRefusedBy",
+        "@type": "@id"
+      },
+
+      "phone": "http://schema.org/telephone",
       "Person": "http://xmlns.com/foaf/0.1/Person",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "name": "http://xmlns.com/foaf/0.1/name",
+
       "img": {
          "@id": "http://xmlns.com/foaf/0.1/img",
          "@type": "@id"
@@ -22,7 +69,6 @@
          "@type": "@id"
       },
       "nationality": "http://schema.org/nationality",
-      "telephone": "http://schema.org/telephone",
       "Address": "http://www.w3.org/2006/vcard/ns#Address",
       "address": "http://www.w3.org/2006/vcard/ns#address",
       "street": "http://www.w3.org/2006/vcard/ns#street-address",
