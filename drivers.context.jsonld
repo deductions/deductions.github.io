@@ -1,7 +1,11 @@
 { "@context": {
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
-      "long": "geo:long",
-      "lat": "geo:lat",
+      "long": {
+        "@type": "xsd:float",
+        "@id": "geo:long" },
+      "lat": {
+        "@type": "xsd:float",
+        "@id": "geo:lat" },
 
     "driver": "http://deductions.github.io/drivers.owl.ttl#",
       "RideEnquiry": "driver:RideEnquiry",
@@ -46,6 +50,11 @@
         "@id": "driver:serviceRefusedBy",
         "@type": "@id"
       },
+
+    "timestamp" : {
+      "@id" : "driver:timestamp",
+      "@type" : "xsd:long"
+    },
 
       "phone": "http://schema.org/telephone",
       "Person": "http://xmlns.com/foaf/0.1/Person",
