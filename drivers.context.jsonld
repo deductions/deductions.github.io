@@ -8,7 +8,11 @@
         "@id": "geo:lat" },
 
     "driver": "http://deductions.github.io/drivers.owl.ttl#",
+
       "RideEnquiry": "driver:RideEnquiry",
+      "Driver": "driver:Driver",
+      "Passenger": "driver:Passenger",
+
       "from":  {
         "@id": "driver:from",
         "@type": "@id"
