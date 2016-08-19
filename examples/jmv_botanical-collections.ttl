@@ -1,0 +1,21 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbr:     <http://dbpedia.org/resource/> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix : <http://deductions.github.io/biological-collections.owl.ttl#> .
+@prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
+
+<Iris_sibirica> a :Planting ;
+  :species dbpedia:Iris_sibirica ;
+  :provenance <http://www.lesjardinsaquatiques.fr/#shop> ;
+  :acquisitionDate "2016-07"^^xsd:date ;
+  :inCollection :jean-marc_vanel_park .
+
+:jean-marc_vanel_park  a :BiologicalCollection ;
+	:manager <http://jmvanel.free.fr/jmv.rdf#me> .
+
+# iris kaempferi apollo
+# bletilla

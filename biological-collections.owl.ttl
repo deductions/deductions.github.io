@@ -1,0 +1,61 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbr:     <http://dbpedia.org/resource/> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix :     <http://deductions.github.io/biological-collections.owl.ttl#> .
+@prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
+
+: a owl:Ontology ;
+	rdfs:label "Collections botaniques ou zoologiques"@fr ;
+	rdfs:comment """Les collections peuvent être vivantes (Arboreta, Zoos) ou non (Herbiers)"""@fr ;
+
+	rdfs:label "botanical or zoological collections"@en ;
+	rdfs:comment """The collections can be living (Arboreta, Zoos) or not (Herbarium)"""@en
+.
+
+:Acquisition a owl:Class ;
+	rdfs:label "Acquisition"@fr ;
+	rdfs:label "Acquisition"@en .
+
+:Planting a owl:Class ; rdfs:subClassOf :Acquisition ;
+	rdfs:label "Plantation"@fr ;
+	rdfs:label "Planting"@en .
+
+:BiologicalCollection a owl:Class ;
+	rdfs:label "Collection Biologique"@fr ;
+	rdfs:label "Biological Collection"@en .
+
+:species a owl:ObjectProperty ;
+	rdfs:label "espèce"@fr ;
+	rdfs:label "species"@en ;
+	rdfs:domain :Acquisition ;
+	rdfs:range dbo:Species .
+
+:provenance a owl:ObjectProperty ;
+	rdfs:label "provenance"@fr ;
+	rdfs:label "provenance"@en ;
+	rdfs:domain :Acquisition ;
+	rdfs:comment """The provenance can be a shop, a person, an Arboretum, the location of a picking in the wild, etc. To transform a vendor web site into a semantic URI, one can add #shop to its URL."""@en .
+
+:acquisitionDate a owl:DatatypeProperty ;
+	rdfs:label "date d'acquisition"@fr ;
+	rdfs:label "acquisition date"@en ;
+	rdfs:domain :Acquisition ;
+	rdfs:range xsd:date .
+
+:inCollection a owl:ObjectProperty ;
+	rdfs:label "dans la Collection"@fr ;
+	rdfs:label "in Collection"@en ;
+	rdfs:domain :Acquisition ;
+	rdfs:range :BiologicalCollection .
+
+:manager a owl:ObjectProperty ;
+	rdfs:label "géré par"@fr ;
+	rdfs:label "manager"@en ;
+	rdfs:domain :BiologicalCollection ;
+	rdfs:range foaf:Person .
+
