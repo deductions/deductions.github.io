@@ -1,0 +1,30 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbr:     <http://dbpedia.org/resource/> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix :     <http://deductions.github.io/biological-collections.owl.ttl#> .
+@prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
+
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+@prefix forms: <http://deductions-software.com/ontologies/forms#> .
+
+bioc:form-Planting
+  a form:specification ;
+  form:classDomain bioc:Planting ;
+  form:showProperties (
+    :species
+    :acquisitionDate
+    :provenance
+    :inCollection
+    rdfs:comment
+  ) .
+
+bioc:form-Planting-species
+	form:fieldAppliesToForm bioc:form-Planting ;
+	form:fieldAppliesToProperty :species ;
+	form:widgetClass form:DBPediaLookup .
+

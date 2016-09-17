@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
 
 @prefix :     <http://deductions.github.io/biological-collections.owl.ttl#> .
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
@@ -39,7 +40,8 @@
 	rdfs:label "provenance"@fr ;
 	rdfs:label "provenance"@en ;
 	rdfs:domain :Acquisition ;
-	rdfs:comment """The provenance can be a shop, a person, an Arboretum, the location of a picking in the wild, etc. To transform a vendor web site into a semantic URI, one can add #shop to its URL."""@en .
+	rdfs:comment """The provenance can be a shop, a person, an Arboretum, the location of a picking in the wild, etc. To transform a vendor web site into a semantic URI, one can add #shop to its URL."""@en ;
+	rdfs:range <https://schema.org/Organization> .
 
 :acquisitionDate a owl:DatatypeProperty ;
 	rdfs:label "date d'acquisition"@fr ;
