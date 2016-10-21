@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' >
+<XMI.header>
+    <XMI.documentation>
+       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
+       <XMI.exporterVersion>0.34(6) revised on $Date$ </XMI.exporterVersion>
+     </XMI.documentation>
+     <XMI.metamodel xmi.name="UML" xmi.version="1.4"/></XMI.header>
+   <XMI.content>
+<UML:Model xmlns="uml:org.omg.xmi.namespace.UML#" xml:id="model">
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="homepage"  xmi.id="&lt;http://xmlns.com/foaf/0.1/homepage>owl:Thing&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="weblog"  xmi.id="&lt;http://xmlns.com/foaf/0.1/weblog>&lt;http://xmlns.com/foaf/0.1/Agent>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Organization"  xmi.id="http://xmlns.com/foaf/0.1/Organization">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/Organization&lt;http://xmlns.com/foaf/0.1/Agent>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An organization.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="PersonalProfileDocument"  xmi.id="http://xmlns.com/foaf/0.1/PersonalProfileDocument">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">A personal profile RDF document.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/PersonalProfileDocument&lt;http://xmlns.com/foaf/0.1/Document>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Online Chat Account -> Online Account"
+             xmi.id="http://xmlns.com/foaf/0.1/OnlineChatAccount&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Generalization">
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineChatAccount"/>
+            </UML:Generalization.child>
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            </UML:Generalization.parent>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="PersonalProfileDocument -> Document"
+             xmi.id="http://xmlns.com/foaf/0.1/PersonalProfileDocument&lt;http://xmlns.com/foaf/0.1/Document>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/PersonalProfileDocument"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="account"  xmi.id="&lt;http://xmlns.com/foaf/0.1/holdsAccount>&lt;http://xmlns.com/foaf/0.1/Agent>&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="interest"  xmi.id="&lt;http://xmlns.com/foaf/0.1/interest>&lt;http://xmlns.com/foaf/0.1/Agent>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Online Account -> Thing"  xmi.id="http://xmlns.com/foaf/0.1/OnlineAccountowl:Thing#Generalization">
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            </UML:Generalization.child>
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+            </UML:Generalization.parent>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Label Property"  xmi.id="http://xmlns.com/foaf/0.1/LabelProperty">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">A foaf:LabelProperty is any RDF property with texual values that serve as labels.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="depicts"  xmi.id="&lt;http://xmlns.com/foaf/0.1/depicts>&lt;http://xmlns.com/foaf/0.1/Image>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Image"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="knows"  xmi.id="&lt;http://xmlns.com/foaf/0.1/knows>&lt;http://xmlns.com/foaf/0.1/Person>&lt;http://xmlns.com/foaf/0.1/Person>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="logo"  xmi.id="&lt;http://xmlns.com/foaf/0.1/logo>owl:Thingowl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="image"  xmi.id="&lt;http://xmlns.com/foaf/0.1/img>&lt;http://xmlns.com/foaf/0.1/Person>&lt;http://xmlns.com/foaf/0.1/Image>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Image"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="based near"  xmi.id="&lt;http://xmlns.com/foaf/0.1/based_near>wgs:SpatialThingwgs:SpatialThing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Online E-commerce Account -> Online Account"
+             xmi.id="http://xmlns.com/foaf/0.1/OnlineEcommerceAccount&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineEcommerceAccount"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Online Chat Account"  xmi.id="http://xmlns.com/foaf/0.1/OnlineChatAccount">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An online chat account.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/OnlineChatAccount&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Project"  xmi.id="http://xmlns.com/foaf/0.1/Project">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">A project (a collective endeavour of some kind).</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="topic_interest"  xmi.id="&lt;http://xmlns.com/foaf/0.1/topic_interest>&lt;http://xmlns.com/foaf/0.1/Agent>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="topic"  xmi.id="&lt;http://xmlns.com/foaf/0.1/topic>&lt;http://xmlns.com/foaf/0.1/Document>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:DataType 
+            name="Boolean"  xmi.id="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <UML:DataType 
+            name="UnlimitedInteger"  xmi.id="http://www.w3.org/2001/XMLSchema#integer"/>
+        <UML:DataType 
+            name="String"  xmi.id="http://www.w3.org/2001/XMLSchema#string"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="tipjar"  xmi.id="&lt;http://xmlns.com/foaf/0.1/tipjar>&lt;http://xmlns.com/foaf/0.1/Agent>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="publications"  xmi.id="&lt;http://xmlns.com/foaf/0.1/publications>&lt;http://xmlns.com/foaf/0.1/Person>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Image -> Document"  xmi.id="http://xmlns.com/foaf/0.1/Image&lt;http://xmlns.com/foaf/0.1/Document>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Image"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="workplace homepage"  xmi.id="&lt;http://xmlns.com/foaf/0.1/workplaceHomepage>&lt;http://xmlns.com/foaf/0.1/Person>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="made"  xmi.id="&lt;http://xmlns.com/foaf/0.1/made>&lt;http://xmlns.com/foaf/0.1/Agent>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="primary topic"  xmi.id="&lt;http://xmlns.com/foaf/0.1/primaryTopic>&lt;http://xmlns.com/foaf/0.1/Document>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Group -> Agent"  xmi.id="http://xmlns.com/foaf/0.1/Group&lt;http://xmlns.com/foaf/0.1/Agent>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Group"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="member"  xmi.id="&lt;http://xmlns.com/foaf/0.1/member>&lt;http://xmlns.com/foaf/0.1/Group>&lt;http://xmlns.com/foaf/0.1/Agent>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Group"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Online Account"  xmi.id="http://xmlns.com/foaf/0.1/OnlineAccount">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccountowl:Thing#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An online account.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:Classifier.feature>
+                <UML:Attribute name="account name" xmi.id="http://xmlns.com/foaf/0.1/accountName">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">Indicates the name (identifier) associated with this online account.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Person -> Spatial Thing"  xmi.id="http://xmlns.com/foaf/0.1/Personwgs:SpatialThing#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Online Gaming Account -> Online Account"
+             xmi.id="http://xmlns.com/foaf/0.1/OnlineGamingAccount&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineGamingAccount"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Person"  xmi.id="http://xmlns.com/foaf/0.1/Person">
+            <UML:Classifier.feature>
+                <UML:Attribute name="family_name" xmi.id="http://xmlns.com/foaf/0.1/family_name">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The family name of some person.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="familyName" xmi.id="http://xmlns.com/foaf/0.1/familyName">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The family name of some person.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="Surname" xmi.id="http://xmlns.com/foaf/0.1/surname">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The surname of some person.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="lastName" xmi.id="http://xmlns.com/foaf/0.1/lastName">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The last name of a person.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="geekcode" xmi.id="http://xmlns.com/foaf/0.1/geekcode">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A textual geekcode for this person, see http://www.geekcode.com/geek.html</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="myersBriggs" xmi.id="http://xmlns.com/foaf/0.1/myersBriggs">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A Myers Briggs (MBTI) personality classification.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="firstName" xmi.id="http://xmlns.com/foaf/0.1/firstName">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The first name of a person.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/Person&lt;http://xmlns.com/foaf/0.1/Agent>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:Classifier.feature>
+                <UML:Attribute name="plan" xmi.id="http://xmlns.com/foaf/0.1/plan">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A .plan comment, in the tradition of finger and '.plan' files.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/Personwgs:SpatialThing#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">A person.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="account"  xmi.id="&lt;http://xmlns.com/foaf/0.1/account>&lt;http://xmlns.com/foaf/0.1/Agent>&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="page"  xmi.id="&lt;http://xmlns.com/foaf/0.1/page>owl:Thing&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="openid"  xmi.id="&lt;http://xmlns.com/foaf/0.1/openid>&lt;http://xmlns.com/foaf/0.1/Agent>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="work info homepage"  xmi.id="&lt;http://xmlns.com/foaf/0.1/workInfoHomepage>&lt;http://xmlns.com/foaf/0.1/Person>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class  xmi.id="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="schoolHomepage"  xmi.id="&lt;http://xmlns.com/foaf/0.1/schoolHomepage>&lt;http://xmlns.com/foaf/0.1/Person>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Online E-commerce Account"  xmi.id="http://xmlns.com/foaf/0.1/OnlineEcommerceAccount">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/OnlineEcommerceAccount&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An online e-commerce account.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Group"  xmi.id="http://xmlns.com/foaf/0.1/Group">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/Group&lt;http://xmlns.com/foaf/0.1/Agent>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">A class of Agents.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="account service homepage"  xmi.id="&lt;http://xmlns.com/foaf/0.1/accountServiceHomepage>&lt;http://xmlns.com/foaf/0.1/OnlineAccount>&lt;http://xmlns.com/foaf/0.1/Document>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Document"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="personal mailbox"  xmi.id="&lt;http://xmlns.com/foaf/0.1/mbox>&lt;http://xmlns.com/foaf/0.1/Agent>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Agent"  xmi.id="http://xmlns.com/foaf/0.1/Agent">
+            <UML:Classifier.feature>
+                <UML:Attribute name="Skype ID" xmi.id="http://xmlns.com/foaf/0.1/skypeID">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A Skype ID</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="age" xmi.id="http://xmlns.com/foaf/0.1/age">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The age in years of some agent.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An agent (eg. person, group, software or physical artifact).</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:Classifier.feature>
+                <UML:Attribute name="AIM chat ID" xmi.id="http://xmlns.com/foaf/0.1/aimChatID">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">An AIM chat ID</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="ICQ chat ID" xmi.id="http://xmlns.com/foaf/0.1/icqChatID">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">An ICQ chat ID</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute
+                    name="sha1sum of a personal mailbox URI name" xmi.id="http://xmlns.com/foaf/0.1/mbox_sha1sum">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the first owner of the mailbox.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="Yahoo chat ID" xmi.id="http://xmlns.com/foaf/0.1/yahooChatID">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A Yahoo chat ID</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="birthday" xmi.id="http://xmlns.com/foaf/0.1/birthday">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="MSN chat ID" xmi.id="http://xmlns.com/foaf/0.1/msnChatID">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">An MSN chat ID</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="gender" xmi.id="http://xmlns.com/foaf/0.1/gender">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">The gender of this Agent (typically but not necessarily 'male' or 'female').</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="jabber ID" xmi.id="http://xmlns.com/foaf/0.1/jabberID">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A jabber ID for something.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="status" xmi.id="http://xmlns.com/foaf/0.1/status">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A string expressing what the user is happy for the general public (normally) to know about their current activity.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Image"  xmi.id="http://xmlns.com/foaf/0.1/Image">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An image.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/Image&lt;http://xmlns.com/foaf/0.1/Document>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="maker"  xmi.id="&lt;http://xmlns.com/foaf/0.1/maker>owl:Thing&lt;http://xmlns.com/foaf/0.1/Agent>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="thumbnail"  xmi.id="&lt;http://xmlns.com/foaf/0.1/thumbnail>&lt;http://xmlns.com/foaf/0.1/Image>&lt;http://xmlns.com/foaf/0.1/Image>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Image"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Image"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Person -> Agent"  xmi.id="http://xmlns.com/foaf/0.1/Person&lt;http://xmlns.com/foaf/0.1/Agent>#Generalization">
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+            </UML:Generalization.child>
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+            </UML:Generalization.parent>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Spatial Thing"  xmi.id="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Document"  xmi.id="http://xmlns.com/foaf/0.1/Document">
+            <UML:Classifier.feature>
+                <UML:Attribute name="sha1sum (hex)" xmi.id="http://xmlns.com/foaf/0.1/sha1">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="">A sha1sum hash, in hex.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">A document.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Online Gaming Account"  xmi.id="http://xmlns.com/foaf/0.1/OnlineGamingAccount">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://xmlns.com/foaf/0.1/OnlineGamingAccount&lt;http://xmlns.com/foaf/0.1/OnlineAccount>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="">An online gaming account.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="funded by"  xmi.id="&lt;http://xmlns.com/foaf/0.1/fundedBy>owl:Thingowl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="past project"  xmi.id="&lt;http://xmlns.com/foaf/0.1/pastProject>&lt;http://xmlns.com/foaf/0.1/Person>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="focus"  xmi.id="&lt;http://xmlns.com/foaf/0.1/focus>co:Conceptowl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Organization -> Agent"  xmi.id="http://xmlns.com/foaf/0.1/Organization&lt;http://xmlns.com/foaf/0.1/Agent>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Agent"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Organization"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="depiction"  xmi.id="&lt;http://xmlns.com/foaf/0.1/depiction>owl:Thing&lt;http://xmlns.com/foaf/0.1/Image>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Image"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="theme"  xmi.id="&lt;http://xmlns.com/foaf/0.1/theme>owl:Thingowl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="current project"  xmi.id="&lt;http://xmlns.com/foaf/0.1/currentProject>&lt;http://xmlns.com/foaf/0.1/Person>owl:Thing#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://www.w3.org/2002/07/owl#Thing"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://xmlns.com/foaf/0.1/Person"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+</UML:Model>
+  </XMI.content>
+</XMI>

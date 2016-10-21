@@ -1,3 +1,45 @@
+<h3>Ontologies in UML diagrams</h3>
+<p>I don't pretend to make an exact UML equivalent of any OWL ontology.
+This is just a way to make UML diagrams from RDF vocabularies, using the Open Source tool ArgoUML.</p>
+
+UML model for FOAF in XMI
+<a href="foaf.ttl.xmi"> foaf.ttl.xmi </a>
+<br/>
+UML diagram of FOAF for ArgoUML 0.34
+<a href="foaf.ttl.xmi.zargo">
+foaf.ttl.xmi.zargo
+</a>
+<br/>
+<br/>
+UML diagram of FOAF in ArgoUML
+<br/>
+<img src="FOAF-UML_2016-10-21.png">
+</img>
+
+<br/>
+<br/>
+The XMI was obtained by two nice RDF tools:
+<ul>
+<li>
+Euler / EYE the N3 rule engine
+</li>
+<li>
+Gloze the XML &lt;--> RDF canonical transform tool
+</li>
+</ul>
+
+The N3 rules
+<a href="https://sourceforge.net/p/deductions/code/HEAD/tree/n3_nojs/owl_to_uml.n3">
+owl_to_uml.n3</a>
+<br/>
+The shell script
+<a href="https://sourceforge.net/p/deductions/code/HEAD/tree/n3_nojs/owl2uml.sh">
+owl2uml.sh</a>
+<br/>
+The sed script <a href="https://sourceforge.net/p/deductions/code/HEAD/tree/n3_nojs/owl_to_uml.sed">
+owl_to_uml.sed</a>
+<br/>
+
 <h3>Ontologie chauffeurs / passagers / courses </h3>
 
 <a href="drivers.context.jsonld"> drivers.context.jsonld </a>
@@ -6,3 +48,6 @@
 
 <h3>Ontologie Collections botaniques ou zoologiques</h3>
 <a href="biological-collections.owl.ttl"> biological-collections.owl.ttl </a>
+
+
+
