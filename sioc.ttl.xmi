@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' >
+<XMI.header>
+    <XMI.documentation>
+       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
+       <XMI.exporterVersion>0.34(6) revised on $Date$ </XMI.exporterVersion>
+     </XMI.documentation>
+     <XMI.metamodel xmi.name="UML" xmi.version="1.4"/></XMI.header>
+   <XMI.content>
+<UML:Model xmlns="uml:org.omg.xmi.namespace.UML#" xml:id="model">
+    <UML:Namespace.ownedElement>
+        <UML:Class  xmi.id="http://xmlns.com/foaf/0.1/Document"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has member"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_member>&lt;http://rdfs.org/sioc/ns#Usergroup>&lt;http://rdfs.org/sioc/ns#UserAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Usergroup"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Forum -> Container"  xmi.id="http://rdfs.org/sioc/ns#Forum&lt;http://rdfs.org/sioc/ns#Container>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Forum"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="subscriber of"  xmi.id="&lt;http://rdfs.org/sioc/ns#subscriber_of>&lt;http://rdfs.org/sioc/ns#UserAccount>&lt;http://rdfs.org/sioc/ns#Container>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="previous version"  xmi.id="&lt;http://rdfs.org/sioc/ns#previous_version>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Item"  xmi.id="http://rdfs.org/sioc/ns#Item">
+            <UML:Classifier.feature>
+                <UML:Attribute name="content" xmi.id="http://rdfs.org/sioc/ns#content">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The content of the Item in plain text format.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="ip address" xmi.id="http://rdfs.org/sioc/ns#ip_address">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The IP address used when creating this Item. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">An Item is something which can be in a Container.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has subscriber"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_subscriber>&lt;http://rdfs.org/sioc/ns#Container>&lt;http://rdfs.org/sioc/ns#UserAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Role"  xmi.id="http://rdfs.org/sioc/ns#Role">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has container"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_container>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Container>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has host"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_host>&lt;http://rdfs.org/sioc/ns#Forum>&lt;http://rdfs.org/sioc/ns#Site>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Site"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Forum"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Space"  xmi.id="http://rdfs.org/sioc/ns#Space">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="parent of"  xmi.id="&lt;http://rdfs.org/sioc/ns#parent_of>&lt;http://rdfs.org/sioc/ns#Container>&lt;http://rdfs.org/sioc/ns#Container>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="latest version"  xmi.id="&lt;http://rdfs.org/sioc/ns#latest_version>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="previous by date"  xmi.id="&lt;http://rdfs.org/sioc/ns#previous_by_date>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has parent"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_parent>&lt;http://rdfs.org/sioc/ns#Container>&lt;http://rdfs.org/sioc/ns#Container>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="follows"  xmi.id="&lt;http://rdfs.org/sioc/ns#follows>&lt;http://rdfs.org/sioc/ns#UserAccount>&lt;http://rdfs.org/sioc/ns#UserAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has reply"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_reply>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class  xmi.id="http://xmlns.com/foaf/0.1/Agent"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="administrator of"  xmi.id="&lt;http://rdfs.org/sioc/ns#administrator_of>&lt;http://rdfs.org/sioc/ns#UserAccount>&lt;http://rdfs.org/sioc/ns#Site>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Site"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="User Account"  xmi.id="http://rdfs.org/sioc/ns#UserAccount">
+            <UML:Classifier.feature>
+                <UML:Attribute name="first name" xmi.id="http://rdfs.org/sioc/ns#first_name">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">First (real) name of this User. Synonyms include given name or christian name.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A user account in an online community site.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:Classifier.feature>
+                <UML:Attribute name="email sha1" xmi.id="http://rdfs.org/sioc/ns#email_sha1">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">An electronic mail address of the UserAccount, encoded using SHA1.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="last name" xmi.id="http://rdfs.org/sioc/ns#last_name">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">Last (real) name of this user. Synonyms include surname or family name.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has modifier"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_modifier>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#UserAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Usergroup"  xmi.id="http://rdfs.org/sioc/ns#Usergroup">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Forum"  xmi.id="http://rdfs.org/sioc/ns#Forum">
+            <UML:Classifier.feature>
+                <UML:Attribute name="num threads" xmi.id="http://rdfs.org/sioc/ns#num_threads">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The number of Threads (AKA discussion topics) in a Forum.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A discussion area on which Posts or entries are made.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://rdfs.org/sioc/ns#Forum&lt;http://rdfs.org/sioc/ns#Container>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:DataType 
+            name="Boolean"  xmi.id="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <UML:DataType 
+            name="UnlimitedInteger"  xmi.id="http://www.w3.org/2001/XMLSchema#integer"/>
+        <UML:DataType 
+            name="String"  xmi.id="http://www.w3.org/2001/XMLSchema#string"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="container of"  xmi.id="&lt;http://rdfs.org/sioc/ns#container_of>&lt;http://rdfs.org/sioc/ns#Container>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Thread"  xmi.id="http://rdfs.org/sioc/ns#Thread">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://rdfs.org/sioc/ns#Thread&lt;http://rdfs.org/sioc/ns#Container>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A container for a series of threaded discussion Posts or Items.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has moderator"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_moderator>&lt;http://rdfs.org/sioc/ns#Forum>&lt;http://rdfs.org/sioc/ns#UserAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Forum"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="host of"  xmi.id="&lt;http://rdfs.org/sioc/ns#host_of>&lt;http://rdfs.org/sioc/ns#Site>&lt;http://rdfs.org/sioc/ns#Forum>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Site"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Forum"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="moderator of"  xmi.id="&lt;http://rdfs.org/sioc/ns#moderator_of>&lt;http://rdfs.org/sioc/ns#UserAccount>&lt;http://rdfs.org/sioc/ns#Forum>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Forum"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Community"  xmi.id="http://rdfs.org/sioc/ns#Community">
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">Community is a high-level concept that defines an online community and what it consists of.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has administrator"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_administrator>&lt;http://rdfs.org/sioc/ns#Site>&lt;http://rdfs.org/sioc/ns#UserAccount>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Site"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Thread -> Container"  xmi.id="http://rdfs.org/sioc/ns#Thread&lt;http://rdfs.org/sioc/ns#Container>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Container"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Thread"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="modifier of"  xmi.id="&lt;http://rdfs.org/sioc/ns#modifier_of>&lt;http://rdfs.org/sioc/ns#UserAccount>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="next by date"  xmi.id="&lt;http://rdfs.org/sioc/ns#next_by_date>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="reply of"  xmi.id="&lt;http://rdfs.org/sioc/ns#reply_of>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Container"  xmi.id="http://rdfs.org/sioc/ns#Container">
+            <UML:Classifier.feature>
+                <UML:Attribute name="last item date" xmi.id="http://rdfs.org/sioc/ns#last_item_date">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The date and time of the last Post (or Item) in a Forum (or a Container), in ISO 8601 format.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="num items" xmi.id="http://rdfs.org/sioc/ns#num_items">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The number of Posts (or Items) in a Forum (or a Container).</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">An area in which content Items are contained.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="usergroup of"  xmi.id="&lt;http://rdfs.org/sioc/ns#usergroup_of>&lt;http://rdfs.org/sioc/ns#Usergroup>&lt;http://rdfs.org/sioc/ns#Space>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Usergroup"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Space"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class  xmi.id="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Site -> Space"  xmi.id="http://rdfs.org/sioc/ns#Site&lt;http://rdfs.org/sioc/ns#Space>#Generalization">
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Space"/>
+            </UML:Generalization.parent>
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Site"/>
+            </UML:Generalization.child>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Post"  xmi.id="http://rdfs.org/sioc/ns#Post">
+            <UML:Classifier.feature>
+                <UML:Attribute name="subject" xmi.id="http://rdfs.org/sioc/ns#subject">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">Keyword(s) describing subject of the Post.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="created at" xmi.id="http://rdfs.org/sioc/ns#created_at">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">When this was created, in ISO 8601 format.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="description" xmi.id="http://rdfs.org/sioc/ns#description">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The content of the Post.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="modified at" xmi.id="http://rdfs.org/sioc/ns#modified_at">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">When this was modified, in ISO 8601 format.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:Classifier.feature>
+                <UML:Attribute name="title" xmi.id="http://rdfs.org/sioc/ns#title">
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://rdfs.org/sioc/ns#Post&lt;http://rdfs.org/sioc/ns#Item>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:Classifier.feature>
+                <UML:Attribute name="content encoded" xmi.id="http://rdfs.org/sioc/ns#content_encoded">
+                    <UML:ModelElement.taggedValue>
+                        <UML:TaggedValue>
+                            <UML:TaggedValue.dataValue xml:lang="en">The encoded content of the Post, contained in CDATA areas.</UML:TaggedValue.dataValue>
+                        </UML:TaggedValue>
+                    </UML:ModelElement.taggedValue>
+                    <UML:StructuralFeature.type>
+                        <UML:DataType xmi.idref="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </UML:StructuralFeature.type>
+                </UML:Attribute>
+            </UML:Classifier.feature>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">An article or message that can be posted to a Forum.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="has usergroup"  xmi.id="&lt;http://rdfs.org/sioc/ns#has_usergroup>&lt;http://rdfs.org/sioc/ns#Space>&lt;http://rdfs.org/sioc/ns#Usergroup>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Usergroup"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Space"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="next version"  xmi.id="&lt;http://rdfs.org/sioc/ns#next_version>&lt;http://rdfs.org/sioc/ns#Item>&lt;http://rdfs.org/sioc/ns#Item>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Association 
+            name="member of"  xmi.id="&lt;http://rdfs.org/sioc/ns#member_of>&lt;http://rdfs.org/sioc/ns#UserAccount>&lt;http://rdfs.org/sioc/ns#Usergroup>#Association">
+            <UML:Association.connection>
+                <UML:AssociationEnd isNavigable="true">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Usergroup"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd isNavigable="false">
+                    <UML:AssociationEnd.participant>
+                        <UML:Class xmi.idref="http://rdfs.org/sioc/ns#UserAccount"/>
+                    </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+            </UML:Association.connection>
+        </UML:Association>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Generalization 
+            name="Post -> Item"  xmi.id="http://rdfs.org/sioc/ns#Post&lt;http://rdfs.org/sioc/ns#Item>#Generalization">
+            <UML:Generalization.child>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Post"/>
+            </UML:Generalization.child>
+            <UML:Generalization.parent>
+                <UML:Class xmi.idref="http://rdfs.org/sioc/ns#Item"/>
+            </UML:Generalization.parent>
+        </UML:Generalization>
+    </UML:Namespace.ownedElement>
+    <UML:Namespace.ownedElement>
+        <UML:Class 
+            name="Site"  xmi.id="http://rdfs.org/sioc/ns#Site">
+            <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref="http://rdfs.org/sioc/ns#Site&lt;http://rdfs.org/sioc/ns#Space>#Generalization"/>
+            </UML:GeneralizableElement.generalization>
+            <UML:ModelElement.taggedValue>
+                <UML:TaggedValue>
+                    <UML:TaggedValue.dataValue xml:lang="en">A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space.</UML:TaggedValue.dataValue>
+                </UML:TaggedValue>
+            </UML:ModelElement.taggedValue>
+        </UML:Class>
+    </UML:Namespace.ownedElement>
+</UML:Model>
+  </XMI.content>
+</XMI>
