@@ -1,0 +1,98 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbr:     <http://dbpedia.org/resource/> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+
+@prefix :   <http://deductions.github.io/task-management.owl.ttl#> .
+@prefix tm: <http://deductions.github.io/task-management.owl.ttl#> .
+
+
+tm:Task a owl:Class ;
+	rdfs:label "Tâche"@fr ;
+	rdfs:label "Task"@en .
+    
+
+tm:project a owl:ObjectProperty ;
+        rdfs:label "projet"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range foaf:Project .
+
+tm:state a owl:ObjectProperty ;
+        rdfs:label "Etat"@fr ;
+        rdfs:domain tm:Task  ;
+        rdfs:range [ owl:oneOf tm:TODO, tm:UnderWay, tm:DONE ] .
+
+tm:TODO rdfs:label "A faire"@fr .
+tm:UnderWay rdfs:label "En cours"@fr .
+tm:DONE rdfs:label "Fait"@fr .
+
+tm:workDurationEstimated a owl:DatatypeProperty ;
+        rdfs:label "JH estimé"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
+tm:workDuration a owl:DatatypeProperty ;
+        rdfs:label "JH réel"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
+tm:assignee a owl:ObjectProperty ;
+        rdfs:label "Assignée à"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range foaf:Person .
+
+tm:managedBy a owl:DatatypeProperty ;
+        rdfs:label 
+      "Suivi par"@fr ;
+        rdfs:domain tm:Task .
+
+tm:realizedBy a owl:DatatypeProperty ;
+        rdfs:label "Réalisée par"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range foaf:Person .
+
+tm:dailyPrice a owl:DatatypeProperty ;
+        rdfs:label "TJM"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
+tm:estimatedPrice a owl:DatatypeProperty ;
+        rdfs:label "Tarif estimé"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
+tm:price a owl:DatatypeProperty ;
+        rdfs:label "Tarif réel"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
+# "Détail" ->  rdfs.comment,
+
+tm:discussion a owl:DatatypeProperty ;
+        rdfs:label "Discussion"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range sioc:Thread .
+
+tm:groupe a owl:DatatypeProperty ;
+        rdfs:label "Groupe"@fr ;
+        rdfs:domain tm:Task .
+
+tm:priority  a owl:DatatypeProperty ;
+        rdfs:label    "Priorité"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
+tm:technology a owl:ObjectProperty ;
+        rdfs:label "Technologie"@fr ;
+        rdfs:domain tm:Task .
+
+tm:hardness a owl:DatatypeProperty ;
+        rdfs:label "Difficulté"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range xsd:integer .
+
