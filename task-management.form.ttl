@@ -22,7 +22,7 @@ tm:form-Task
     tm:workDuration
     tm:assignee
     tm:managedBy
-    tm:realizedBy
+    # tm:realizedBy
     tm:dailyPrice
     tm:estimatedPrice
     tm:price

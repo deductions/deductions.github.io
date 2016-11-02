@@ -51,10 +51,7 @@ tm:managedBy a owl:DatatypeProperty ;
       "Suivi par"@fr ;
         rdfs:domain tm:Task .
 
-tm:realizedBy a owl:DatatypeProperty ;
-        rdfs:label "Réalisée par"@fr ;
-        rdfs:domain tm:Task ;
-        rdfs:range foaf:Person .
+# tm:realizedBy a owl:DatatypeProperty ; rdfs:label "Réalisée par"@fr ; rdfs:domain tm:Task ; rdfs:range foaf:Person .
 
 tm:dailyPrice a owl:DatatypeProperty ;
         rdfs:label "TJM"@fr ;
