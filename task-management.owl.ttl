@@ -96,3 +96,14 @@ tm:hardness a owl:DatatypeProperty ;
         rdfs:domain tm:Task ;
         rdfs:range xsd:integer .
 
+
+tm:author a owl:ObjectProperty ;
+        rdfs:label "Créée par"@fr ;
+        rdfs:domain tm:Task ;
+        rdfs:range foaf:Person .
+
+tm:tasks a owl:ObjectProperty ;
+        rdfs:label "sous-tâches"@fr ;
+        rdfs:domain tm:Task .
+
+

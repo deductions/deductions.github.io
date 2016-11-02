@@ -16,22 +16,24 @@ tm:form-Task
   a form:specification ;
   form:classDomain tm:Task ;
   form:showProperties (
-tm:project
-tm:state
-tm:workDurationEstimated
-tm:workDuration
-tm:assignee
-tm:managedBy
-tm:realizedBy
-tm:dailyPrice
-tm:estimatedPrice
-tm:price
-tm:discussion
-tm:group
-tm:priority 
-tm:technology
-tm:hardness
-  ) .
+    tm:project
+    tm:state
+    tm:workDurationEstimated
+    tm:workDuration
+    tm:assignee
+    tm:managedBy
+    tm:realizedBy
+    tm:dailyPrice
+    tm:estimatedPrice
+    tm:price
+    tm:discussion
+    tm:group
+    tm:priority 
+    tm:technology
+    tm:hardness
+    tm:author
+    tm:tasks
+) .
 
 tm:form-Task-technology
 	form:fieldAppliesToForm tm:form-Task ;
