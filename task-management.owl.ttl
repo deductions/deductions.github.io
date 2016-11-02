@@ -78,7 +78,7 @@ tm:discussion a owl:DatatypeProperty ;
         rdfs:domain tm:Task ;
         rdfs:range sioc:Thread .
 
-tm:groupe a owl:DatatypeProperty ;
+tm:group a owl:DatatypeProperty ;
         rdfs:label "Groupe"@fr ;
         rdfs:domain tm:Task .
 

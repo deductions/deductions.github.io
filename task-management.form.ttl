@@ -1,0 +1,39 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbr:     <http://dbpedia.org/resource/> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix :   <http://deductions.github.io/task-management.owl.ttl#> .
+@prefix tm: <http://deductions.github.io/task-management.owl.ttl#> .
+
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+@prefix forms: <http://deductions-software.com/ontologies/forms#> .
+
+tm:form-Task
+  a form:specification ;
+  form:classDomain tm:Task ;
+  form:showProperties (
+tm:project
+tm:state
+tm:workDurationEstimated
+tm:workDuration
+tm:assignee
+tm:managedBy
+tm:realizedBy
+tm:dailyPrice
+tm:estimatedPrice
+tm:price
+tm:discussion
+tm:group
+tm:priority 
+tm:technology
+tm:hardness
+  ) .
+
+tm:form-Task-technology
+	form:fieldAppliesToForm tm:form-Task ;
+	form:fieldAppliesToProperty tm:technology ;
+	form:widgetClass form:DBPediaLookup .
