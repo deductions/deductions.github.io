@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
 
 @prefix :     <http://deductions.github.io/biological-collections.owl.ttl#> .
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
@@ -25,6 +26,7 @@
 :Planting a owl:Class ; rdfs:subClassOf :Acquisition ;
 	rdfs:label "Plantation"@fr ;
 	rdfs:label "Planting"@en .
+:Planting form:labelProperty bioc:species.
 
 :BiologicalCollection a owl:Class ;
 	rdfs:label "Collection Biologique"@fr ;
