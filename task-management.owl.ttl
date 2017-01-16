@@ -12,6 +12,10 @@
 @prefix tm: <http://deductions.github.io/task-management.owl.ttl#> .
 
 
+: a owl:Ontology ;
+	rdfs:label "Task management ontology."@en ;
+	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> .
+
 tm:Task a owl:Class ;
 	rdfs:label "Tâche"@fr ;
 	rdfs:label "Task"@en .

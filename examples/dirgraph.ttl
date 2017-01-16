@@ -1,0 +1,33 @@
+    PREFIX d: <http://metamaps.com/data/graph123/>
+    PREFIX gr: <http://deductions.github.io/directed-graph.owl.ttl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX foaf: <ttp://xmlns.com/foaf/0.1/>
+
+d:l1 gr:head d:my_new_idea ;
+         gr:tail d:my_other_cool_idea ;
+         rdfs:label "Fun!" .
+
+d:l2     gr:head d:neruda_productions ;
+    gr:tail d:my_new_idea .
+
+
+d:neruda_productions rdfs:label "Neruda Productions".
+
+d:l3     gr:head d:my_new_idea ;
+    gr:tail d:newcomer_community .
+
+d:l4     gr:head d:testing_creation ;
+    gr:tail d:neruda_productions .
+
+d:l5     gr:head d:my_other_cool_idea ;
+    gr:tail d:neruda_productions .
+
+
+# Les noeuds seront typés, ou pas, en fonction des infos gérées par l'appli.:
+    
+d:personne-devin a foaf:Person ;
+    foaf:mbox <mailto:devin@callysto.com> .
+
+d:neruda_productions a foaf:Organization ;
+    rdfs:label "Coolest arts organization";
+    foaf:homepage <https://www.nerudaarts.ca/> .

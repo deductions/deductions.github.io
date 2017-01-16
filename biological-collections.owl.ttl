@@ -17,8 +17,8 @@
 	rdfs:comment """Les collections peuvent être vivantes (Arboreta, Zoos) ou non (Herbiers)"""@fr ;
 
 	rdfs:label "botanical or zoological collections"@en ;
-	rdfs:comment """The collections can be living (Arboreta, Zoos) or not (Herbarium)"""@en
-.
+	rdfs:comment """The collections can be living (Arboreta, Zoos) or not (Herbarium)"""@en ;
+	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> .
 
 :Acquisition a owl:Class ;
 	rdfs:label "Acquisition"@fr ;
