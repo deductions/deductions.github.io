@@ -15,6 +15,8 @@
 
 tm:form-Task
   a form:specification ;
+  rdfs:label "Tâche"@en ;
+  rdfs:label "Tâche"@fr ;
   form:classDomain tm:Task ;
   form:showProperties (
     tm:project

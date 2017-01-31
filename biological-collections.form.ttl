@@ -14,6 +14,8 @@
 
 bioc:form-Planting
   a form:specification ;
+  rdfs:label "Planting"@en ;
+  rdfs:label "Plantation"@fr ;
   form:classDomain bioc:Planting ;
   form:showProperties (
     :species
