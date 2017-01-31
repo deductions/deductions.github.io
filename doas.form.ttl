@@ -1,0 +1,72 @@
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+@prefix forms: <http://deductions-software.com/ontologies/forms#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix doas:  <#> .
+
+forms:doasForm
+  a form:specification ;
+  form:classDomain doas:Description ;
+  rdfs:label "Description d'un logiciel"@fr ;
+  rdfs:label "Description Of A Software"@en ;
+  form:showProperties (
+    doas:softwareType
+    doas:features
+    doas:language
+    doas:inputFileTypes
+    doas:outputFileTypes
+    doas:uiTechnology
+    doas:dependencyManager
+    doas:hasProject
+  ) .
+
+forms:doasForm-softwareType
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:softwareType ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-features
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:features ;
+	form:widgetClass form:DBPediaLookup .
+forms:doasForm-
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas: ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-language
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:language ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-inputFileTypes
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:inputFileTypes ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-outputFileTypes
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:outputFileTypes ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-uiTechnology
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:uiTechnology ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-dependencyManager
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:dependencyManager ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-hasProject
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:hasProject ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas: ;
+	form:widgetClass form:DBPediaLookup .
+
+
