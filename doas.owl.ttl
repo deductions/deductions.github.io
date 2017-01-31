@@ -1,0 +1,67 @@
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix app:   <http://jmvanel.free.fr/ontology/software_applications.owl#> .
+@prefix list:  <http://www.w3.org/2000/10/swap/list#> .
+@prefix log:   <http://www.w3.org/2000/10/swap/log#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+
+@prefix doas:  <#> .
+
+doas:Description  a       owl:Class ;
+	rdfs:subclassOf doap:Project ;
+        rdfs:comment  """Description Of A Software, a formal Description of a software focusing on architecture, feature, and input/output, enabling to search a software component according to needs,
+and leveraging on dbPdedia.
+complementary to DOAP."""@en ;
+        rdfs:label    "A software Description"@en .
+     
+doas:softwareType  a  owl:ObjectProperty ;
+        rdfs:comment  "software type : client, server, library, compiler, etc (as dbPdedia URI)"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "software type"@en ;
+        rdfs:range    owl:Thing .
+
+doas:features  a      owl:ObjectProperty ;
+        rdfs:comment  "features, as dbPdedia URI's"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "features"@en ;
+        rdfs:range    owl:Thing .
+
+doas:outputFileTypes  a  owl:ObjectProperty ;
+        rdfs:comment  "output file types, as dbPdedia URI's"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "output file types"@en ;
+        rdfs:range    owl:Thing .
+
+doas:inputFileTypes  a  owl:ObjectProperty ;
+        rdfs:comment  "input file types, as dbPdedia URI's"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "input file types"@en ;
+        rdfs:range    owl:Thing .
+
+doas:uiTechnology  a  owl:ObjectProperty ;
+        rdfs:comment  "User interface, a broad platform or library name, like web browser, Java Swing, TCL/TK, as dbPdedia URI's"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "UI"@en ;
+        rdfs:range    owl:Thing .
+
+doas:dependencyManager a  owl:ObjectProperty ;
+        rdfs:comment  "dependency Manager like npm, Maven, SBT, or explicitely dbpedia:Nothing, as dbPdedia URI's"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "dependency Manager"@en ;
+        rdfs:range    owl:Thing .
+
+doas:language  a      owl:ObjectProperty ;
+        rdfs:comment  "programming language, as dbPdedia URI's"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "language"@en ;
+        rdfs:range    owl:Thing .
+
+doas:hasProject a owl:ObjectProperty ;
+        rdfs:comment  "the associated project(s)"@en ;
+        rdfs:domain   doas:Description ;
+        rdfs:label    "project"@en ;
+        rdfs:range  doap:Project .
