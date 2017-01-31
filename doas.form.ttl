@@ -2,7 +2,8 @@
 @prefix forms: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-@prefix doas:  <#> .
+# <doas.owl.ttl must be at the same relative URI as doas.form.ttl :
+@prefix doas:  <doas.owl.ttl#> .
 
 forms:doasForm
   a form:specification ;
