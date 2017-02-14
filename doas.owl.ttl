@@ -11,57 +11,72 @@
 
 @prefix doas:  <#> .
 
-doas:Description  a       owl:Class ;
-	rdfs:subclassOf doap:Project ;
+doas: a owl:Ontology ;
+        rdfs:label "Description Of A Software" ;
         rdfs:comment  """Description Of A Software, a formal Description of a software focusing on architecture, feature, and input/output, enabling to search a software component according to needs,
 and leveraging on dbPdedia.
-complementary to DOAP."""@en ;
-        rdfs:label    "A software Description"@en .
+complementary to DOAP."""@en .
+
+doas:Software a       owl:Class ;
+	rdfs:subclassOf doap:Project ;
+        rdfs:label    "A software"@en .
      
 doas:softwareType  a  owl:ObjectProperty ;
         rdfs:comment  "software type : client, server, library, compiler, etc (as dbPdedia URI)"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "software type"@en ;
         rdfs:range    owl:Thing .
 
 doas:features  a      owl:ObjectProperty ;
         rdfs:comment  "features, as dbPdedia URI's"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "features"@en ;
         rdfs:range    owl:Thing .
 
 doas:outputFileTypes  a  owl:ObjectProperty ;
         rdfs:comment  "output file types, as dbPdedia URI's"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "output file types"@en ;
         rdfs:range    owl:Thing .
 
 doas:inputFileTypes  a  owl:ObjectProperty ;
         rdfs:comment  "input file types, as dbPdedia URI's"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "input file types"@en ;
         rdfs:range    owl:Thing .
 
 doas:uiTechnology  a  owl:ObjectProperty ;
         rdfs:comment  "User interface, a broad platform or library name, like web browser, Java Swing, TCL/TK, as dbPdedia URI's"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "UI"@en ;
         rdfs:range    owl:Thing .
 
 doas:dependencyManager a  owl:ObjectProperty ;
         rdfs:comment  "dependency Manager like npm, Maven, SBT, or explicitely dbpedia:Nothing, as dbPdedia URI's"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "dependency Manager"@en ;
         rdfs:range    owl:Thing .
 
 doas:language  a      owl:ObjectProperty ;
         rdfs:comment  "programming language, as dbPdedia URI's"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "language"@en ;
         rdfs:range    owl:Thing .
 
+doas:modelingTechnology  a owl:ObjectProperty ;
+        rdfs:comment  "modeling technology, as dbPdedia URI's; e.g. OWL, UML, SQL, Swagger, ..."@en ;
+        rdfs:domain   doas:Software ;
+        rdfs:label    "modeling technology"@en ;
+        rdfs:range    owl:Thing .
+
+doas:isPluginOf a owl:ObjectProperty ;
+        rdfs:comment  "embedding software if this sowftware is a plugin or module, as dbPdedia URI's; e.g. Firefox, Chrome, Apache, Protégé, ..."@en ;
+        rdfs:domain   doas:Software ;
+        rdfs:label    "plugin of"@en ;
+        rdfs:range    doas:Software .
+
 doas:hasProject a owl:ObjectProperty ;
         rdfs:comment  "the associated project(s)"@en ;
-        rdfs:domain   doas:Description ;
+        rdfs:domain   doas:Software ;
         rdfs:label    "project"@en ;
         rdfs:range  doap:Project .

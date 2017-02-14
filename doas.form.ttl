@@ -7,7 +7,7 @@
 
 forms:doasForm
   a form:specification ;
-  form:classDomain doas:Description ;
+  form:classDomain doas:Software ;
   rdfs:label "Description d'un logiciel"@fr ;
   rdfs:label "Description Of A Software"@en ;
   form:showProperties (
@@ -18,6 +18,9 @@ forms:doasForm
     doas:outputFileTypes
     doas:uiTechnology
     doas:dependencyManager
+    doas:isPluginOf
+    doas:modelingTechnology
+
     doas:hasProject
   ) .
 
@@ -65,9 +68,14 @@ forms:doasForm-hasProject
 	form:fieldAppliesToProperty doas:hasProject ;
 	form:widgetClass form:DBPediaLookup .
 
-forms:doasForm-
+forms:doasForm-modelingTechnology
 	form:fieldAppliesToForm forms:doasForm ;
-	form:fieldAppliesToProperty doas: ;
+	form:fieldAppliesToProperty doas:modelingTechnology ;
+	form:widgetClass form:DBPediaLookup .
+
+forms:doasForm-isPluginOf
+	form:fieldAppliesToForm forms:doasForm ;
+	form:fieldAppliesToProperty doas:isPluginOf ;
 	form:widgetClass form:DBPediaLookup .
 
 
