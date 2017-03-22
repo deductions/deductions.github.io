@@ -32,7 +32,8 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 	rdfs:range xsd:string .
 
 :quantity a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
+	rdfs:label "quantité"@fr ;
+	rdfs:label "quantity"@en ;
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:integer .
 
@@ -42,12 +43,13 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 	rdfs:range xsd:string .
 
 :year  a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
+	rdfs:label "année"@fr ;
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:integer .
 
 :isOrganic a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
+	rdfs:label "Bio"@fr ;
+	rdfs:label "Organic"@en ;
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:boolean .
  
