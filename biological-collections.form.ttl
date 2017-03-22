@@ -10,7 +10,6 @@
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
 
 @prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
-@prefix forms: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms#> .
 
 bioc:form-Planting
   a form:specification ;
@@ -29,4 +28,20 @@ bioc:form-Planting-species
 	form:fieldAppliesToForm bioc:form-Planting ;
 	form:fieldAppliesToProperty :species ;
 	form:widgetClass form:DBPediaLookup .
+
+bioc:form-BiologicalCollection
+  a form:specification ;
+  rdfs:label "Biological Collection"@en ;
+  rdfs:label "Collection Biologique"@fr ;
+  form:classDomain bioc:BiologicalCollection ;
+  form:showProperties (
+  :location
+  :manager
+) .
+
+bioc:form-BiologicalCollection-location
+	form:fieldAppliesToForm bioc:form-BiologicalCollection ;
+	form:fieldAppliesToProperty :location ;
+	form:widgetClass form:DBPediaLookup .
+
 

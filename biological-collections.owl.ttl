@@ -63,3 +63,15 @@
 	rdfs:domain :BiologicalCollection ;
 	rdfs:range foaf:Person .
 
+:location  a owl:ObjectProperty ;
+	rdfs:label "emplacement"@fr ;
+	rdfs:label "location"@en ;
+	rdfs:domain :BiologicalCollection ;
+	rdfs:range :Place .
+
+# temporary: use a LOD class
+:Place a owl:Class ;
+	rdfs:label "Emplacement"@fr ;
+	rdfs:label "Place"@en .
+
+

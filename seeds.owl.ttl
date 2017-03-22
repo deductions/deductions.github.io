@@ -1,0 +1,57 @@
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix :      <http://deductions.github.io/seeds.owl.ttl#> .
+@prefix seeds: <http://deductions.github.io/seeds.owl.ttl#> .
+
+
+: a owl:Ontology ;
+	rdfs:label "Vocabuliare pour échange de graines"@fr .
+
+:SeedsBatch a owl:Class ;
+  rdfs:subClassOf :Acquisition ;
+  rdfs:label "lot de graines"@fr ;
+  rdfs:comment """
+Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres du réseau,
+- la quantité en nb ou grammage,
+- les indications sur les graines
+	- année,
+	- origine (paysanne autoproduite ou nom du fournisseur,
+	- bio ou non, 
+        - espèce, variété )
+- l'emplacement géographique de ces graines,
+- la modalité de partage (vente, don, ...) .
+""" .
+
+:sharingMode a owl:DatatypeProperty ;
+	rdfs:label " modalité de partage (vente, don, ...)"@fr ;
+	rdfs:domain :SeedsBatch ;
+	rdfs:range xsd:string .
+
+:quantity a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:domain :SeedsBatch ;
+	rdfs:range xsd:integer .
+
+:variety  a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:domain :SeedsBatch ;
+	rdfs:range xsd:string .
+
+:year  a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:domain :SeedsBatch ;
+	rdfs:range xsd:integer .
+
+:isOrganic a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:domain :SeedsBatch ;
+	rdfs:range xsd:boolean .
+ 
+
+
+
+
