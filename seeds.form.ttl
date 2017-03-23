@@ -27,5 +27,8 @@ seeds:form-SeedsBatch-species
 	form:fieldAppliesToForm seeds:form-SeedsBatch ;
 	form:fieldAppliesToProperty :species ;
 	form:widgetClass form:DBPediaLookup .
-
+seeds:form-SeedsBatch-variety
+	form:fieldAppliesToForm seeds:form-SeedsBatch ;
+	form:fieldAppliesToProperty :variety ;
+	form:widgetClass form:DBPediaLookup .
 

@@ -38,7 +38,8 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 	rdfs:range xsd:integer .
 
 :variety  a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
+	rdfs:label "variété"@fr ;
+	rdfs:label "variety"@en ;
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:string .
 
