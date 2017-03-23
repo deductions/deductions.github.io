@@ -27,13 +27,14 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 """ .
 
 :sharingMode a owl:DatatypeProperty ;
-	rdfs:label " modalité de partage (vente, don, ...)"@fr ;
+	rdfs:label "modalité de partage (vente, don, ...)"@fr ;
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:string .
 
 :quantity a owl:DatatypeProperty ;
 	rdfs:label "quantité"@fr ;
 	rdfs:label "quantity"@en ;
+	rdfs:comment """quantité en grammage (grammes); exemple "100" """@fr ;
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:integer .
 
@@ -54,7 +55,3 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 	rdfs:domain :SeedsBatch ;
 	rdfs:range xsd:boolean .
  
-
-
-
-
