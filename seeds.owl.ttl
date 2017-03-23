@@ -3,16 +3,17 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
 
 @prefix :      <http://deductions.github.io/seeds.owl.ttl#> .
 @prefix seeds: <http://deductions.github.io/seeds.owl.ttl#> .
 
 
 : a owl:Ontology ;
-	rdfs:label "Vocabuliare pour échange de graines"@fr .
+	rdfs:label "Vocabulaire pour échange de graines"@fr .
 
 :SeedsBatch a owl:Class ;
-  rdfs:subClassOf :Acquisition ;
+  rdfs:subClassOf bioc:Acquisition ;
   rdfs:label "lot de graines"@fr ;
   rdfs:comment """
 Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres du réseau,

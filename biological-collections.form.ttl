@@ -25,6 +25,7 @@ bioc:form-Planting
   ) .
 
 bioc:form-Planting-species
+  rdfs:label "Plantation - espèce détail"@fr ;
 	form:fieldAppliesToForm bioc:form-Planting ;
 	form:fieldAppliesToProperty :species ;
 	form:widgetClass form:DBPediaLookup .
@@ -40,6 +41,7 @@ bioc:form-BiologicalCollection
 ) .
 
 bioc:form-BiologicalCollection-location
+  rdfs:label "Plantation - emplacement détail"@fr ;
 	form:fieldAppliesToForm bioc:form-BiologicalCollection ;
 	form:fieldAppliesToProperty :location ;
 	form:widgetClass form:DBPediaLookup .

@@ -10,7 +10,7 @@
 seeds:form-SeedsBatch
   a form:specification ;
   rdfs:label "Seeds Batch"@en ;
-  rdfs:label "lot de graines"@fr ;
+  rdfs:label "lot de graines - formulaires"@fr ;
   form:classDomain seeds:SeedsBatch ;
   form:showProperties (
     bioc:species
@@ -19,16 +19,18 @@ seeds:form-SeedsBatch
     :quantity
     :isOrganic
     bioc:provenance	# pointe vers le fournisseur si non autoproduit
-    bioc:inCollection
+    bioc:inCollection	# pointe vers mon organisation
     :sharingMode
     rdfs:comment
   ) .
 
 seeds:form-SeedsBatch-species
+  rdfs:label "lot de graines - espèce détail"@fr ;
 	form:fieldAppliesToForm seeds:form-SeedsBatch ;
 	form:fieldAppliesToProperty bioc:species ;
 	form:widgetClass form:DBPediaLookup .
 seeds:form-SeedsBatch-variety
+  rdfs:label "lot de graines - variété détail"@fr ;
 	form:fieldAppliesToForm seeds:form-SeedsBatch ;
 	form:fieldAppliesToProperty :variety ;
 	form:widgetClass form:DBPediaLookup .
