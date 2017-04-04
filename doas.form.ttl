@@ -20,8 +20,7 @@ forms:doasForm
     doas:dependencyManager
     doas:isPluginOf
     doas:modelingTechnology
-
-    doas:hasProject
+    doas:hasDependency
   ) .
 
 forms:doasForm-softwareType
@@ -63,10 +62,7 @@ forms:doasForm-dependencyManager
 	form:fieldAppliesToProperty doas:dependencyManager ;
 	form:widgetClass form:DBPediaLookup .
 
-forms:doasForm-hasProject
-	form:fieldAppliesToForm forms:doasForm ;
-	form:fieldAppliesToProperty doas:hasProject ;
-	form:widgetClass form:DBPediaLookup .
+# forms:doasForm-hasProject form:fieldAppliesToForm forms:doasForm ; form:fieldAppliesToProperty doas:hasProject ; form:widgetClass form:DBPediaLookup .
 
 forms:doasForm-modelingTechnology
 	form:fieldAppliesToForm forms:doasForm ;

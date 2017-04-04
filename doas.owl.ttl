@@ -5,6 +5,7 @@
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix doap: <http://usefulinc.com/ns/doap#>.
@@ -19,64 +20,70 @@ complementary to DOAP."""@en .
 
 doas:Software a       owl:Class ;
 	rdfs:subclassOf doap:Project ;
-        rdfs:label    "A software"@en .
+        rdfs:label    "A software"@en ;
+        rdfs:label    "Un logiciel"@fr ;
+	owl:sameClassAs dbo:Software .
      
 doas:softwareType  a  owl:ObjectProperty ;
         rdfs:comment  "software type : client, server, library, compiler, etc (as dbPdedia URI)"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "software type"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "type de logiciel"@fr .
 
 doas:features  a      owl:ObjectProperty ;
         rdfs:comment  "features, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "features"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "fonctionnalités"@fr .
 
 doas:outputFileTypes  a  owl:ObjectProperty ;
         rdfs:comment  "output file types, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "output file types"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "types de fichiers en sortie"@fr .
 
 doas:inputFileTypes  a  owl:ObjectProperty ;
         rdfs:comment  "input file types, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "input file types"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "types de fichiers en entrée"@fr .
 
 doas:uiTechnology  a  owl:ObjectProperty ;
         rdfs:comment  "User interface, a broad platform or library name, like web browser, Java Swing, TCL/TK, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "UI"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "IHM"@fr .
 
 doas:dependencyManager a  owl:ObjectProperty ;
         rdfs:comment  "dependency Manager like npm, Maven, SBT, or explicitely dbpedia:Nothing, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "dependency Manager"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "Gestionnaire de dépendances"@fr .
 
-doas:language  a      owl:ObjectProperty ;
+dbo:programmingLanguage  a      owl:ObjectProperty ;
         rdfs:comment  "programming language, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
-        rdfs:label    "language"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "language (programming)"@en ;
+        rdfs:label    "langage (de programmation)"@fr .
 
 doas:modelingTechnology  a owl:ObjectProperty ;
         rdfs:comment  "modeling technology, as dbPdedia URI's; e.g. OWL, UML, SQL, Swagger, ..."@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "modeling technology"@en ;
-        rdfs:range    owl:Thing .
+        rdfs:label    "technologie de modélisation"@fr .
 
 doas:isPluginOf a owl:ObjectProperty ;
         rdfs:comment  "embedding software if this sowftware is a plugin or module, as dbPdedia URI's; e.g. Firefox, Chrome, Apache, Protégé, ..."@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "plugin of"@en ;
+        rdfs:label    "Additif dans (plugin)"@fr ;
         rdfs:range    doas:Software .
 
-doas:hasProject a owl:ObjectProperty ;
-        rdfs:comment  "the associated project(s)"@en ;
+doas:hasDependency a owl:ObjectProperty ;
+        rdfs:comment  "software (typically library) on which this sowftware depends; the plan is to get the information from a dependency Manager"@en ;
         rdfs:domain   doas:Software ;
-        rdfs:label    "project"@en ;
-        rdfs:range  doap:Project .
+        rdfs:label    "dependency"@en ;
+        rdfs:label    "dépendance"@fr ;
+        rdfs:range    doas:Software .
+
+# doas:hasProject a owl:ObjectProperty ; rdfs:comment  "the associated project(s)"@en ; rdfs:domain   doas:Software ; rdfs:label    "project"@en ; rdfs:range  doap:Project .
