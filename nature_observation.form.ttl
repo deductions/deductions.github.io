@@ -10,26 +10,31 @@
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 
 @prefix :       <http://deductions.github.io/nature_observation.owl.ttl#> .
 @prefix nature: <http://deductions.github.io/nature_observation.owl.ttl#> .
 
-: a owl:Ontology ;
-	rdfs:label "Observations naturalistes, botaniques ou zoologiques"@fr ;
-	rdfs:label "Nature Observations, botanical or zoological"@en ;
-	rdfs:comment """"""@fr ;
+:form-Observation
+  a form:specification ;
+  rdfs:label "Observation"@en ;
+  rdfs:label "Observation"@fr ;
+  form:classDomain :Observation ;
+  form:showProperties (
+    nature:taxon 
+    #event:place
+    foaf:maker
+    dct:date
+    geo:long
+    geo:lat
+    event:produced_in
+ ) .
 
-	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
-	dct:subject dbpedia:Natural_history , dbpedia:Observation .
+:form-BiologicalCollection-taxon
+  rdfs:label "Observation - taxon détail"@fr ;
+	form:fieldAppliesToForm :form-Observation ;
+	form:fieldAppliesToProperty :taxon ;
+	form:widgetClass form:DBPediaLookup .
 
-:Observation a owl:Class ;
-	rdfs:subClassOf event:Event ;
-	rdfs:label "Observation"@fr ;
-	rdfs:label "Observation"@en .
-
-:taxon a owl:ObjectProperty ;
-	rdfs:label "taxon"@fr ;
-	rdfs:label "taxon"@en ;
-	rdfs:domain :Observation ;
-	rdfs:range dbo:Species .
+event:produced_in rdfs:label "effectué(e) lors de cet évènement"@fr .
 
