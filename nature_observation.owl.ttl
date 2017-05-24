@@ -26,6 +26,7 @@
 	rdfs:subClassOf event:Event ;
 	rdfs:label "Observation"@fr ;
 	rdfs:label "Observation"@en .
+:Observation form:labelProperty :taxon .
 
 :taxon a owl:ObjectProperty ;
 	rdfs:label "taxon"@fr ;

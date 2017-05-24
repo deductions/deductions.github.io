@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 
 @prefix :     <http://deductions.github.io/biological-collections.owl.ttl#> .
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
@@ -22,6 +23,8 @@ bioc:form-Planting
     :provenance
     :inCollection
     rdfs:comment
+    geo:long
+    geo:lat
   ) .
 
 bioc:form-Planting-species
