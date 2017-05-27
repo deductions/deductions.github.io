@@ -26,6 +26,7 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 - l'emplacement géographique de ces graines,
 - la modalité de partage (vente, don, ...) .
 """ .
+:SeedsBatch foaf:img <hazelnut-seed.svg> .
 
 :sharingMode a owl:DatatypeProperty ;
 	rdfs:label "modalité de partage (vente, don, ...)"@fr ;

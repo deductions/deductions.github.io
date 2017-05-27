@@ -23,7 +23,8 @@ doas:Software a       owl:Class ;
         rdfs:label    "A software"@en ;
         rdfs:label    "Un logiciel"@fr ;
 	owl:sameClassAs dbo:Software .
-     
+doas:Software foaf:img <software.svg> .
+
 doas:softwareType  a  owl:ObjectProperty ;
         rdfs:comment  "software type : client, server, library, compiler, etc (as dbPdedia URI)"@en ;
         rdfs:domain   doas:Software ;
