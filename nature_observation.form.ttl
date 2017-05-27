@@ -27,6 +27,7 @@
     dct:date
     geo:long
     geo:lat
+    dcterms:date
     event:produced_in
  ) .
 
