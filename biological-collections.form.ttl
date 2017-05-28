@@ -27,6 +27,7 @@ bioc:form-Planting
     geo:long
     geo:lat
     dcterms:date
+    rdfs:comment
   ) .
 
 bioc:form-Planting-species
