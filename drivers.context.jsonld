@@ -7,6 +7,17 @@
         "@type": "xsd:float",
         "@id": "geo:lat" },
 
+  "geoloc": "http://deductions.github.io/geoloc.owl.ttl#",
+
+  "mobile": {
+        "@id":  "geoloc:mobile",
+        "@type": "@id" },
+
+  "precedingPoint": {
+        "@id":  "geoloc:precedingPoint",
+        "@type": "@id" },
+
+
     "driver": "http://deductions.github.io/drivers.owl.ttl#",
 
       "RideEnquiry": "driver:RideEnquiry",

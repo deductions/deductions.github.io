@@ -16,8 +16,8 @@
 
 :form-Observation
   a form:specification ;
-  rdfs:label "Observation"@en ;
-  rdfs:label "Observation"@fr ;
+  rdfs:label "Observation form"@en ;
+  rdfs:label "formulaire Observation"@fr ;
   form:classDomain :Observation ;
   form:showProperties (
     nature:taxon 
