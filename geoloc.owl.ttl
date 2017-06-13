@@ -4,6 +4,7 @@
 @prefix dct:     <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # geoloc vocab'
 geoloc: a owl:Ontology ;
@@ -16,7 +17,7 @@ geoloc: a owl:Ontology ;
 
 
 geoloc:MobilePoint a owl:Class ;
-	rdfs:label ""@fr ;
+	rdfs:label "un Point Mobile a des cooordonées et un horodatage"@fr ;
 	rdfs:label "a Mobile Point has cooordinates and timestamp"@en .
 
 geoloc:Mobile a owl:Class ;
@@ -24,15 +25,22 @@ geoloc:Mobile a owl:Class ;
 	rdfs:label "a Mobile is the permanent object associated to Mobile Points (vehicule, etc)"@en .
 
 geoloc:mobile a owl:ObjectProperty ;
-	rdfs:label ""@fr ;
+	rdfs:label "Id de l'objet mobile"@fr ;
 	rdfs:label ""@en ;
 	rdfs:domain geoloc:MobilePoint ;
 	rdfs:range geoloc:Mobile .
 
 geoloc:precedingPoint a owl:ObjectProperty ;
-	rdfs:label ""@fr ;
+	rdfs:label "Point précédent sur le trajet"@fr ;
 	rdfs:label "preceding Point on the path"@en ;
 	rdfs:comment """Same Mobile"""@en ;
 	rdfs:domain geoloc:MobilePoint ;
 	rdfs:range geoloc:MobilePoint .
+
+geoloc:speed a owl:DatatypeProperty ;
+	rdfs:label "vitesse"@fr ;
+	rdfs:label "speed"@en ;
+	rdfs:domain geoloc:MobilePoint ;
+	rdfs:range xsd:float .
+
 
