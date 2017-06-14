@@ -36,8 +36,8 @@ vehma:puk a owl:DatatypeProperty ;
 	rdfs:range xsd:long .
 
 vehma:imei a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
-	rdfs:label ""@en ;
+	rdfs:label "imei"@fr ;
+	rdfs:label "imei"@en ;
 	rdfs:domain vehma:SIMCard ;
 	rdfs:range xsd:long ;
 	dct:subject dbpedia:International_Mobile_Equipment_Identity .
