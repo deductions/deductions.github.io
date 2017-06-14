@@ -1,0 +1,91 @@
+@prefix geoloc: <http://deductions.github.io/geoloc.owl.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vehma: <http://deductions.github.io/vehicule-management.owl.ttl#> .
+
+# vehicule-management
+vehma: a owl:Ontology ;
+	rdfs:label "Gestion de mobiles Géolocalisés: véhicules, personnes, etc"@fr ;
+	rdfs:label "management of geolocated mobiles: vehicles, people, etc."@en ;
+	rdfs:comment """"""@fr ;
+
+	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
+	dct:subject dbpedia:Geolocation .
+
+
+vehma:SIMCard a owl:Class ;
+	rdfs:label "Carte SIM"@fr ;
+	rdfs:label "SIM Card"@en .
+
+#### Datatype Properties
+
+vehma:sim a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:label ""@en ;
+	rdfs:domain vehma:SIMCard ;
+	rdfs:range xsd:long .
+
+vehma:puk a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:label ""@en ;
+	rdfs:domain vehma:SIMCard ;
+	rdfs:range xsd:long .
+
+vehma:imei a owl:DatatypeProperty ;
+	rdfs:label ""@fr ;
+	rdfs:label ""@en ;
+	rdfs:domain vehma:SIMCard ;
+	rdfs:range xsd:long ;
+	dct:subject dbpedia:International_Mobile_Equipment_Identity .
+
+<http://schema.org/telephone> a owl:DatatypeProperty ;
+	rdfs:label "téléphone"@fr ;
+	rdfs:label "telephone"@en ;
+	rdfs:domain vehma:SIMCard ;
+	rdfs:range xsd:string .
+
+#### Object Properties
+
+vehma:vehicule a owl:ObjectProperty ;
+	rdfs:label ""@fr ;
+	rdfs:label ""@en ;
+	rdfs:domain vehma:SIMCard ;
+	rdfs:range vehma:Vehicle .
+
+########
+
+vehma:Vehicle a owl:Class ;
+	rdfs:label "Véhicule"@fr ;
+	rdfs:label "Vehicle"@en .
+
+#### Datatype Properties
+
+vehma:internalNumber a owl:DatatypeProperty ;
+	rdfs:label "numéro"@fr ;
+	rdfs:label "number"@en ;
+	rdfs:domain vehma:Vehicle ;
+	rdfs:range xsd:long .
+
+vehma:registrationNumber a owl:DatatypeProperty ;
+	rdfs:label "numéro d'immatriculation"@fr ;
+	rdfs:label "registration number"@en ;
+	rdfs:domain vehma:Vehicle ;
+	rdfs:range xsd:String .
+
+vehma:providerName a owl:DatatypeProperty ;
+	rdfs:label "fournisseur"@fr ;
+	rdfs:label "provider"@en ;
+	rdfs:domain vehma:Vehicle ;
+	rdfs:range xsd:String .
+
+vehma:ownerName a owl:DatatypeProperty ;
+	rdfs:label "propriétaire"@fr ;
+	rdfs:label "owner"@en ;
+	rdfs:domain vehma:Vehicle ;
+	rdfs:range xsd:String .
+
+
