@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix vehma: <http://deductions.github.io/vehicule-management.owl.ttl#> .
 
-# vehicule-management
+# vehicle-management
 vehma: a owl:Ontology ;
 	rdfs:label "Gestion de mobiles Géolocalisés: véhicules, personnes, etc"@fr ;
 	rdfs:label "management of geolocated mobiles: vehicles, people, etc."@en ;
@@ -24,14 +24,14 @@ vehma:SIMCard a owl:Class ;
 #### Datatype Properties
 
 vehma:sim a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
-	rdfs:label ""@en ;
+	rdfs:label "sim"@fr ;
+	rdfs:label "sim"@en ;
 	rdfs:domain vehma:SIMCard ;
 	rdfs:range xsd:long .
 
 vehma:puk a owl:DatatypeProperty ;
-	rdfs:label ""@fr ;
-	rdfs:label ""@en ;
+	rdfs:label "puk"@fr ;
+	rdfs:label "puk"@en ;
 	rdfs:domain vehma:SIMCard ;
 	rdfs:range xsd:long .
 
@@ -50,9 +50,9 @@ vehma:imei a owl:DatatypeProperty ;
 
 #### Object Properties
 
-vehma:vehicule a owl:ObjectProperty ;
-	rdfs:label ""@fr ;
-	rdfs:label ""@en ;
+vehma:vehicle a owl:ObjectProperty ;
+	rdfs:label "Véhicule"@fr ;
+	rdfs:label "Vehicle"@en ;
 	rdfs:domain vehma:SIMCard ;
 	rdfs:range vehma:Vehicle .
 
