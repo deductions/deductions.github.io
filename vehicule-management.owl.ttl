@@ -52,8 +52,8 @@ vehma:imei a owl:DatatypeProperty ;
 #### Object Properties
 
 vehma:vehicle a owl:ObjectProperty ;
-	rdfs:label "Véhicule"@fr ;
-	rdfs:label "Vehicle"@en ;
+	rdfs:label "véhicule"@fr ;
+	rdfs:label "vehicle"@en ;
 	rdfs:domain vehma:SIMCard ;
 	rdfs:range vehma:Vehicle .
 
@@ -62,6 +62,7 @@ vehma:vehicle a owl:ObjectProperty ;
 vehma:Vehicle a owl:Class ;
 #========================
 	rdfs:label "Véhicule"@fr ;
+	rdfs:comment """Attention: Véhicule en français, Vehicle sans u en anglais"""@fr ;
 	rdfs:label "Vehicle"@en .
 
 #### Datatype Properties
@@ -76,22 +77,19 @@ vehma:registrationNumber a owl:DatatypeProperty ;
 	rdfs:label "numéro d'immatriculation"@fr ;
 	rdfs:label "registration number"@en ;
 	rdfs:domain vehma:Vehicle ;
-	rdfs:range xsd:String .
+	rdfs:range xsd:string .
 
 vehma:providerName a owl:DatatypeProperty ;
 	rdfs:label "fournisseur"@fr ;
 	rdfs:label "provider"@en ;
 	rdfs:domain vehma:Vehicle ;
-	rdfs:range xsd:String .
+	rdfs:range xsd:string .
 
 vehma:ownerName a owl:DatatypeProperty ;
 	rdfs:label "propriétaire"@fr ;
 	rdfs:label "owner"@en ;
 	rdfs:domain vehma:Vehicle ;
-	rdfs:range xsd:String .
+	rdfs:range xsd:string .
 
-vehma:TravelStatistic a owl:Class ;
-#================================
-	rdfs:label "Statistique trajet"@fr ;
-	rdfs:label "Travel Statistic"@en .
+
 

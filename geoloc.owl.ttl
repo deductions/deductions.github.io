@@ -17,16 +17,20 @@ geoloc: a owl:Ontology ;
 
 
 geoloc:MobilePoint a owl:Class ;
-	rdfs:label "un Point Mobile a des cooordonées et un horodatage"@fr ;
-	rdfs:label "a Mobile Point has cooordinates and timestamp"@en .
+#=============================
+	rdfs:label "Point d'une trajectoire, ayant des cooordonées et un horodatage"@fr ;
+	rdfs:comment """La trajectoire d'un Mobile est constituée des points dans l'ordre chronologique;
+cet ordre est supposé identique à l'ordre défini par la relation geoloc:precedingPoint."""@fr ;
+	rdfs:label "Mobile Point, with cooordinates and timestamp"@en .
 
 geoloc:Mobile a owl:Class ;
-	rdfs:label ""@fr ;
+#========================
+	rdfs:label "Objet mobile; objet permanent associé aux points du trajet"@fr ;
 	rdfs:label "a Mobile is the permanent object associated to Mobile Points (vehicule, etc)"@en .
 
 geoloc:mobile a owl:ObjectProperty ;
 	rdfs:label "Id de l'objet mobile"@fr ;
-	rdfs:label ""@en ;
+	rdfs:label "Id"@en ;
 	rdfs:domain geoloc:MobilePoint ;
 	rdfs:range geoloc:Mobile .
 
@@ -38,9 +42,31 @@ geoloc:precedingPoint a owl:ObjectProperty ;
 	rdfs:range geoloc:MobilePoint .
 
 geoloc:speed a owl:DatatypeProperty ;
-	rdfs:label "vitesse"@fr ;
-	rdfs:label "speed"@en ;
+	rdfs:label "vitesse (km/h)"@fr ;
+	rdfs:label "speed (km/h)"@en ;
 	rdfs:domain geoloc:MobilePoint ;
 	rdfs:range xsd:float .
 
 
+geoloc:TravelStatistic a owl:Class ;
+#=================================
+	rdfs:label "Statistique trajet"@fr ;
+	rdfs:label "Travel Statistic"@en .
+
+geoloc:begin a owl:DatatypeProperty ;
+	rdfs:label "instant de début"@fr ;
+	rdfs:label "begin"@en ;
+	rdfs:domain geoloc:TravelStatistic ;
+	rdfs:range xsd:dateTime .
+
+geoloc:end  a owl:DatatypeProperty ;
+	rdfs:label "instant de fin"@fr ;
+	rdfs:label "end"@en ;
+	rdfs:domain geoloc:TravelStatistic ;
+	rdfs:range xsd:dateTime .
+
+geoloc:distance  a owl:DatatypeProperty ;
+	rdfs:label "distance"@fr ;
+	rdfs:label "distance"@en ;
+	rdfs:domain geoloc:TravelStatistic ;
+	rdfs:range xsd:float .
