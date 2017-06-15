@@ -18,6 +18,7 @@ vehma: a owl:Ontology ;
 
 
 vehma:SIMCard a owl:Class ;
+#========================
 	rdfs:label "Carte SIM"@fr ;
 	rdfs:label "SIM Card"@en .
 
@@ -59,6 +60,7 @@ vehma:vehicle a owl:ObjectProperty ;
 ########
 
 vehma:Vehicle a owl:Class ;
+#========================
 	rdfs:label "Véhicule"@fr ;
 	rdfs:label "Vehicle"@en .
 
@@ -88,4 +90,8 @@ vehma:ownerName a owl:DatatypeProperty ;
 	rdfs:domain vehma:Vehicle ;
 	rdfs:range xsd:String .
 
+vehma:TravelStatistic a owl:Class ;
+#================================
+	rdfs:label "Statistique trajet"@fr ;
+	rdfs:label "Travel Statistic"@en .
 

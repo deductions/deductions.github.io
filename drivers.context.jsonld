@@ -18,13 +18,17 @@
         "@id":  "geoloc:precedingPoint",
         "@type": "@id" },
 
-  "date" : "dct:date",
-
   "speed": "geoloc:speed",
   "alt": "geo:alt",
+  "altitude": "geo:alt",
+
+  "batteryStatus": "geoloc:batteryStatus",
+  "chargingStatus": "geoloc:chargingStatus",
+
 
   "dct" : "http://purl.org/dc/terms/" ,
 
+  "date" : "dct:date",
 
 
     "driver": "http://deductions.github.io/drivers.owl.ttl#",
