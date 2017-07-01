@@ -27,6 +27,7 @@
 	rdfs:label "Plantation"@fr ;
 	rdfs:label "Planting"@en .
 :Planting form:labelProperty bioc:species.
+@base <https://deductions.github.io> .
 :Planting foaf:img <ecology.svg> .
 
 :BiologicalCollection a owl:Class ;

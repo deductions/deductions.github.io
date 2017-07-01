@@ -27,6 +27,7 @@
 	rdfs:label "Observation"@fr ;
 	rdfs:label "Observation"@en .
 :Observation form:labelProperty :taxon .
+@base <https://deductions.github.io> .
 :Observation foaf:img <pest-observation.svg> .
 
 :taxon a owl:ObjectProperty ;
