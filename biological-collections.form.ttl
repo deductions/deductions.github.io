@@ -28,6 +28,7 @@ bioc:form-Planting
     geo:lat
     dcterms:date
     rdfs:comment
+    :deathDate
   ) .
 
 bioc:form-Planting-species

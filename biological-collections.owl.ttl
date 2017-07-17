@@ -53,6 +53,12 @@
 	rdfs:domain :Acquisition ;
 	rdfs:range xsd:date .
 
+:deathDate a owl:DatatypeProperty ;
+	rdfs:label "date de mort"@fr ;
+	rdfs:label "death date"@en ;
+	rdfs:domain :Acquisition ;
+	rdfs:range xsd:date .
+
 :inCollection a owl:ObjectProperty ;
 	rdfs:label "dans la Collection"@fr ;
 	rdfs:label "in Collection"@en ;
