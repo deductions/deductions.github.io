@@ -10,7 +10,7 @@
 geoloc: a owl:Ontology ;
 	rdfs:label "Géolocalisation, suivi de mobiles: véhicules, personnes, etc"@fr ;
 	rdfs:label "Geolocation, tracking of mobiles: vehicles, people, etc."@en ;
-	rdfs:comment """"""@fr ;
+	rdfs:comment """Mobile est au sens de mobile en mécanique, ne pas confondre avec téléphone mobile!"""@fr ;
 
 	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
 	dct:subject dbpedia:Geolocation .
@@ -18,10 +18,10 @@ geoloc: a owl:Ontology ;
 
 geoloc:MobilePoint a owl:Class ;
 #=============================
-	rdfs:label "Point d'une trajectoire, ayant des cooordonées et un horodatage"@fr ;
+	rdfs:label "Point d'une trajectoire, ayant des coordonées et un horodatage"@fr ;
 	rdfs:comment """La trajectoire d'un Mobile est constituée des points dans l'ordre chronologique;
 cet ordre est supposé identique à l'ordre défini par la relation geoloc:precedingPoint."""@fr ;
-	rdfs:label "Mobile Point, with cooordinates and timestamp"@en .
+	rdfs:label "Mobile Point, with coordinates and timestamp"@en .
 
 geoloc:Mobile a owl:Class ;
 #========================
@@ -29,8 +29,8 @@ geoloc:Mobile a owl:Class ;
 	rdfs:label "a Mobile is the permanent object associated to Mobile Points (vehicule, etc)"@en .
 
 geoloc:mobile a owl:ObjectProperty ;
-	rdfs:label "Id de l'objet mobile"@fr ;
-	rdfs:label "Id"@en ;
+	rdfs:label "mobile"@fr ;
+	rdfs:label "mobile"@en ;
 	rdfs:domain geoloc:MobilePoint ;
 	rdfs:range geoloc:Mobile .
 
@@ -47,6 +47,11 @@ geoloc:speed a owl:DatatypeProperty ;
 	rdfs:domain geoloc:MobilePoint ;
 	rdfs:range xsd:float .
 
+geoloc:totalDistanceTraveled a owl:DatatypeProperty ;
+	rdfs:label "distance totale parcourue (km)"@fr ;
+	rdfs:label "total Distance Traveled (km)"@en ;
+	rdfs:domain geoloc:MobilePoint ;
+	rdfs:range xsd:float .
 
 geoloc:TravelStatistic a owl:Class ;
 #=================================
