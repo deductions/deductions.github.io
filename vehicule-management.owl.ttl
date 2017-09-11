@@ -91,5 +91,40 @@ vehma:ownerName a owl:DatatypeProperty ;
 	rdfs:domain vehma:Vehicle ;
 	rdfs:range xsd:string .
 
+vehma:currentUser  a owl:ObjectProperty ;
+	rdfs:label "utilisateur courant"@fr ;
+	rdfs:label "current user"@en ;
+	rdfs:domain vehma:Vehicle ;
+	rdfs:range foaf:Agent .
+
+vehma:VehicleUse a owl:Class ;
+#========================
+	rdfs:label "Utilisation véhicule"@fr ;
+	rdfs:label "Vehicle use"@en .
 
 
+# avec les propriétés 
+vehma:user  a owl:ObjectProperty ;
+	rdfs:label "utilisateur"@fr ;
+	rdfs:label "user"@en ;
+	rdfs:domain vehma:VehicleUse ;
+	rdfs:range foaf:Agent .
+
+vehma:vehicleUsed  a owl:ObjectProperty ;
+	rdfs:label "véhicule utilisé"@fr ;
+	rdfs:label "vehicle used"@en ;
+	rdfs:domain vehma:VehicleUse ;
+	rdfs:range vehma:Vehicle .
+
+# début, fin .
+vehma:begin a owl:DatatypeProperty ;
+	rdfs:label "instant de début"@fr ;
+	rdfs:label "begin"@en ;
+	rdfs:domain vehma:VehicleUse ;
+	rdfs:range xsd:dateTime .
+
+vehma:end  a owl:DatatypeProperty ;
+	rdfs:label "instant de fin"@fr ;
+	rdfs:label "end"@en ;
+	rdfs:domain vehma:VehicleUse ;
+	rdfs:range xsd:dateTime .
