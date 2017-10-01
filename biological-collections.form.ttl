@@ -20,10 +20,12 @@ bioc:form-Planting
   form:classDomain bioc:Planting ;
   form:showProperties (
     :species
+    dbo:cultivatedVariety
     :acquisitionDate
     :provenance
     :inCollection
     rdfs:comment
+    rdfs:seeAlso
     geo:long
     geo:lat
     dcterms:date
