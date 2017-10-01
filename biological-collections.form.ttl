@@ -39,6 +39,12 @@ bioc:form-Planting-species
 	form:fieldAppliesToProperty :species ;
 	form:widgetClass form:DBPediaLookup .
 
+bioc:form-Planting-cultivatedVariety
+  rdfs:label "Plantation - variété détail"@fr ;
+	form:fieldAppliesToForm bioc:form-Planting ;
+	form:fieldAppliesToProperty dbo:cultivatedVariety  ;
+	form:widgetClass form:DBPediaLookup .
+
 bioc:form-BiologicalCollection
   a form:specification ;
   rdfs:label "Biological Collection"@en ;
