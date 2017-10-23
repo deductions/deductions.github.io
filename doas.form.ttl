@@ -11,6 +11,8 @@ forms:doasForm
   rdfs:label "Description d'un logiciel"@fr ;
   rdfs:label "Description Of A Software"@en ;
   form:showProperties (
+    rdfs:label
+    rdfs:comment
     doas:softwareType
     doas:features
     doas:language
@@ -21,6 +23,7 @@ forms:doasForm
     doas:isPluginOf
     doas:modelingTechnology
     doas:hasDependency
+    rdfs:seeAlso
   ) .
 
 forms:doasForm-softwareType
