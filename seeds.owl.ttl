@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 
 @prefix :      <http://deductions.github.io/seeds.owl.ttl#> .
 @prefix seeds: <http://deductions.github.io/seeds.owl.ttl#> .
@@ -31,7 +32,8 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
         - espèce, variété )
 - l'emplacement géographique de ces graines,
 - la modalité de partage (vente, don, ...) .
-""" .
+"""  ;
+  form:labelProperty bioc:species .
 
 @base <https://deductions.github.io> .
 :SeedsBatch foaf:img <hazelnut-seed.svg> .
@@ -40,7 +42,8 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 :PottedPlant a owl:Class ;
   rdfs:subClassOf bioc:Specimen, :PlantOffering ;
   rdfs:label "Plante en pot"@fr ;
-  rdfs:label "Potted plant"@en .
+  rdfs:label "Potted plant"@en ;
+  form:labelProperty bioc:species .
 
 
 :sharingMode a owl:DatatypeProperty ;
