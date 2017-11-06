@@ -10,11 +10,17 @@
 
 
 : a owl:Ontology ;
-	rdfs:label "Vocabulaire pour échange de graines"@fr .
+	rdfs:label "Vocabulaire pour échange de graines, plants, etc"@fr ;
+	rdfs:label "Vocabulary for exchange of seeds, plants, etc"@en .
+
+:PlantOffering a owl:Class ;
+  rdfs:label "Offre de plante"@fr ;
+  rdfs:label "Plant offering"@en .
 
 :SeedsBatch a owl:Class ;
-  rdfs:subClassOf bioc:Acquisition ;
-  rdfs:label "lot de graines"@fr ;
+  rdfs:subClassOf bioc:Specimen ;
+  rdfs:label "Lot de graines"@fr ;
+  rdfs:label ""@en ;
   rdfs:comment """
 Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres du réseau,
 - la quantité en nb ou grammage,
@@ -26,35 +32,45 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
 - l'emplacement géographique de ces graines,
 - la modalité de partage (vente, don, ...) .
 """ .
+
 @base <https://deductions.github.io> .
 :SeedsBatch foaf:img <hazelnut-seed.svg> .
 
+
+:PottedPlant a owl:Class ;
+  rdfs:subClassOf bioc:Specimen ;
+  rdfs:label "Plante en pot"@fr ;
+  rdfs:label "Potted plant"@en .
+
+
 :sharingMode a owl:DatatypeProperty ;
-	rdfs:label "modalité de partage (vente, don, ...)"@fr ;
-	rdfs:domain :SeedsBatch ;
+	rdfs:label "modalité de partage (vente, don, échange, ...)"@fr ;
+	rdfs:domain :PlantOffering ;
 	rdfs:range xsd:string .
 
 :quantity a owl:DatatypeProperty ;
 	rdfs:label "quantité"@fr ;
 	rdfs:label "quantity"@en ;
-	rdfs:comment """quantité en grammage (grammes); exemple "100" """@fr ;
-	rdfs:domain :SeedsBatch ;
+	rdfs:comment """quantité en grammage (grammes) pour les graines; exemple "100" """@fr ;
+	rdfs:domain :PlantOffering ;
 	rdfs:range xsd:integer .
 
 :variety  a owl:DatatypeProperty ;
 	rdfs:label "variété"@fr ;
 	rdfs:label "variety"@en ;
-	rdfs:domain :SeedsBatch ;
+	rdfs:domain :PlantOffering ;
 	rdfs:range xsd:string .
 
 :year  a owl:DatatypeProperty ;
 	rdfs:label "année"@fr ;
-	rdfs:domain :SeedsBatch ;
+	rdfs:comment "année de début de culture"@fr ;
+	rdfs:comment "year of starting cultivation"@fr ;
+	rdfs:domain :PlantOffering ;
 	rdfs:range xsd:integer .
 
 :isOrganic a owl:DatatypeProperty ;
 	rdfs:label "Bio"@fr ;
 	rdfs:label "Organic"@en ;
-	rdfs:domain :SeedsBatch ;
+	rdfs:domain :PlantOffering ;
 	rdfs:range xsd:boolean .
  

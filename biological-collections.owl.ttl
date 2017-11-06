@@ -19,11 +19,15 @@
 	rdfs:comment """The collections can be living (Arboreta, Zoos) or not (Herbarium)"""@en ;
 	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> .
 
+:Specimen a owl:Class ;
+	rdfs:label "Specimen"@fr ;
+	rdfs:label "Specimen"@en .
+
 :Acquisition a owl:Class ;
 	rdfs:label "Acquisition"@fr ;
 	rdfs:label "Acquisition"@en .
 
-:Planting a owl:Class ; rdfs:subClassOf :Acquisition ;
+:Planting a owl:Class ; rdfs:subClassOf :Acquisition, :Specimen ;
 	rdfs:label "Plantation"@fr ;
 	rdfs:label "Planting"@en .
 :Planting form:labelProperty bioc:species.
@@ -37,7 +41,7 @@
 :species a owl:ObjectProperty ;
 	rdfs:label "espèce"@fr ;
 	rdfs:label "species"@en ;
-	rdfs:domain :Acquisition ;
+	rdfs:domain :Specimen ;
 	rdfs:range dbo:Species .
 
 :provenance a owl:ObjectProperty ;
@@ -54,8 +58,8 @@
 	rdfs:range xsd:date .
 
 :deathDate a owl:DatatypeProperty ;
-	rdfs:label "date de mort"@fr ;
-	rdfs:label "death date"@en ;
+	rdfs:label "date de disparition"@fr ;
+	rdfs:label "disparition date"@en ;
 	rdfs:domain :Acquisition ;
 	rdfs:range xsd:date .
 
@@ -75,11 +79,5 @@
 	rdfs:label "emplacement"@fr ;
 	rdfs:label "location"@en ;
 	rdfs:domain :BiologicalCollection ;
-	rdfs:range :Place .
-
-# temporary: use a LOD class
-:Place a owl:Class ;
-	rdfs:label "Emplacement"@fr ;
-	rdfs:label "Place"@en .
-
+	rdfs:range dbo:Settlement .
 
