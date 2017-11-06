@@ -43,7 +43,8 @@ Chacun-e indique ce qu'il-elle est prêt-e à partager avec les autres membres d
   rdfs:subClassOf bioc:Specimen, :PlantOffering ;
   rdfs:label "Plante en pot"@fr ;
   rdfs:label "Potted plant"@en ;
-  form:labelProperty bioc:species .
+  form:labelProperty bioc:species ;
+  foaf:img <icons8-potted-plant.png> .
 
 
 :sharingMode a owl:DatatypeProperty ;
