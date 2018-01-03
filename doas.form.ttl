@@ -1,6 +1,7 @@
 @prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix forms: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 
 # <doas.owl.ttl must be at the same relative URI as doas.form.ttl :
 @prefix doas:  <doas.owl.ttl#> .
@@ -15,7 +16,7 @@ forms:doasForm
     rdfs:comment
     doas:softwareType
     doas:features
-    doas:language
+    dbo:programmingLanguage
     doas:inputFileTypes
     doas:outputFileTypes
     doas:uiTechnology
@@ -24,6 +25,8 @@ forms:doasForm
     doas:modelingTechnology
     doas:hasDependency
     rdfs:seeAlso
+    doas:powersWebSite
+    doas:sandboxURL
   ) .
 
 forms:doasForm-softwareType

@@ -52,7 +52,7 @@ doas:inputFileTypes  a  owl:ObjectProperty ;
         rdfs:label    "types de fichiers en entrée"@fr .
 
 doas:uiTechnology  a  owl:ObjectProperty ;
-        rdfs:comment  "User interface, a broad platform or library name, like web browser, Java Swing, TCL/TK, as dbPdedia URI's"@en ;
+        rdfs:comment  "User interface, a broad platform or library name, like web browser (dbpedia:HTML), Java Swing, TCL/TK, as dbPdedia URI's"@en ;
         rdfs:domain   doas:Software ;
         rdfs:label    "UI"@en ;
         rdfs:label    "IHM"@fr .
@@ -89,4 +89,16 @@ doas:hasDependency a owl:ObjectProperty ;
         rdfs:label    "dépendance"@fr ;
         rdfs:range    doas:Software .
 
-# doas:hasProject a owl:ObjectProperty ; rdfs:comment  "the associated project(s)"@en ; rdfs:domain   doas:Software ; rdfs:label    "project"@en ; rdfs:range  doap:Project .
+doas:powersWebSite a owl:ObjectProperty ;
+        rdfs:domain   doas:Software ;
+        rdfs:label    "a web site powered by this software"@en ;
+        rdfs:label    "un site web propulsé par ce logiciel"@fr ;
+        rdfs:comment  "for web service endpoint, use doap:service-endpoint"@en ;
+        rdfs:range    foaf:Document .
+
+doas:sandboxURL a owl:ObjectProperty ;
+        rdfs:domain   doas:Software ;
+        rdfs:label    "a sandbox web site powered by this software"@en ;
+        rdfs:label    """un site web "bac à sable" propulsé par ce logiciel"""@fr ;
+        rdfs:range    foaf:Document .
+
