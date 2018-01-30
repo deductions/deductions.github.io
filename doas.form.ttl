@@ -1,10 +1,12 @@
 @prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
-@prefix forms: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 
 # <doas.owl.ttl must be at the same relative URI as doas.form.ttl :
-@prefix doas:  <doas.owl.ttl#> .
+# should work but trouble cf commit e01e9a6023bf9bd51c4617a5ecd6566527d52436 in SF
+# @prefix doas: <doas.owl.ttl#> .
+@prefix doas:  <http://deductions.github.io/doas.owl.ttl#> .
+@prefix forms: <http://deductions.github.io/doas.owl.ttl#> .
 
 forms:doasForm
   a form:specification ;

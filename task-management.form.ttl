@@ -11,7 +11,6 @@
 @prefix tm: <http://deductions.github.io/task-management.owl.ttl#> .
 
 @prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
-@prefix forms: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms#> .
 
 tm:form-Task
   a form:specification ;
