@@ -49,7 +49,7 @@
 	rdfs:label "provenance"@en ;
 	rdfs:domain :Acquisition ;
 	rdfs:comment """The provenance can be a shop, a person, an Arboretum, the location of a picking in the wild, etc. To transform a vendor web site into a semantic URI, one can add #shop to its URL."""@en ;
-	rdfs:range <https://schema.org/Organization> .
+	rdfs:range foaf:Agent .
 
 :acquisitionDate a owl:DatatypeProperty ;
 	rdfs:label "date d'acquisition"@fr ;
