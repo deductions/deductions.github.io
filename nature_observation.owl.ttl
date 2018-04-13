@@ -23,7 +23,7 @@
 	dct:subject dbpedia:Natural_history , dbpedia:Observation .
 
 :Observation a owl:Class ;
-	rdfs:subClassOf event:Event ;
+	rdfs:subClassOf event:Product ;
 	rdfs:label "Observation"@fr ;
 	rdfs:label "Observation"@en .
 :Observation form:labelProperty :taxon .

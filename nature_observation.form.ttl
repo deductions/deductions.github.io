@@ -36,5 +36,9 @@
 	form:fieldAppliesToProperty :taxon ;
 	form:widgetClass form:DBPediaLookup .
 
-event:produced_in rdfs:label "effectué(e) lors de cet évènement"@fr .
-
+# add this because SF does not yet process:
+# event:Product a owl:Class; owl:equivalentClass [ a owl:Restriction; owl:someValuesFrom event:Event; owl:onProperty event:produced_in ] .
+event:produced_in rdfs:label "effectué(e) lors de cet évènement"@fr ;
+	a owl:ObjectProperty ;
+	rdfs:domain event:Product ;
+	rdfs:range event:Event .
