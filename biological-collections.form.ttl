@@ -28,6 +28,7 @@ bioc:form-Planting
     rdfs:seeAlso
     geo:long
     geo:lat
+    geo:alt
     dcterms:date
     rdfs:comment
     :deathDate
