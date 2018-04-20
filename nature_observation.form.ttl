@@ -25,6 +25,7 @@
     foaf:maker
     geo:long
     geo:lat
+    geo:alt
     dcterms:date
     event:produced_in
     rdfs:comment
