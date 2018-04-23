@@ -30,6 +30,7 @@ bioc:form-Planting
     geo:lat
     geo:alt
     dcterms:date
+    foaf:depiction
     rdfs:comment
     :deathDate
   ) .
