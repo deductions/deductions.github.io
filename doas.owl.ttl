@@ -10,6 +10,7 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix doap: <http://usefulinc.com/ns/doap#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vann: <http://purl.org/vocab/vann/>.
 
 @prefix doas:  <#> .
 
@@ -17,7 +18,10 @@ doas: a owl:Ontology ;
         rdfs:label "Description Of A Software" ;
         rdfs:comment  """Description Of A Software, a formal Description of a software focusing on architecture, feature, and input/output, enabling to search a software component according to needs,
 and leveraging on dbPdedia.
-complementary to DOAP."""@en .
+complementary to DOAP."""@en ;
+	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
+	vann:preferredNamespacePrefix "doas" ;
+	foaf:homepage <http://deductions.github.io> .
 
 doas:Software a       owl:Class ;
 	rdfs:subclassOf doap:Project ;

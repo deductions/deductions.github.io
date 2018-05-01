@@ -5,6 +5,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/>.
 
 # geoloc vocab'
 geoloc: a owl:Ontology ;
@@ -13,8 +14,10 @@ geoloc: a owl:Ontology ;
 	rdfs:comment """Mobile est au sens de mobile en mécanique, ne pas confondre avec téléphone mobile!"""@fr ;
 
 	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
-	dct:subject dbpedia:Geolocation .
-
+	dct:subject dbpedia:Geolocation ;
+	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
+	vann:preferredNamespacePrefix "geoloc" ;
+	foaf:homepage <http://deductions.github.io> .
 
 geoloc:MobilePoint a owl:Class ;
 #=============================
