@@ -17,8 +17,6 @@
 : a owl:Ontology ;
 	rdfs:label "Observations naturalistes, botaniques ou zoologiques"@fr ;
 	rdfs:label "Nature Observations, botanical or zoological"@en ;
-	rdfs:comment """"""@fr ;
-
 	foaf:maker <http://jmvanel.free.fr/jmv.rdf#me> ;
 	dct:subject dbpedia:Natural_history , dbpedia:Observation .
 
@@ -36,3 +34,8 @@
 	rdfs:domain :Observation ;
 	rdfs:range dbo:Species .
 
+:observation a owl:ObjectProperty ;
+	rdfs:label "observation naturaliste"@fr ;
+	rdfs:label "nature observation"@en ;
+	rdfs:comment """permet d'associer une observation à une transplantation, un article publié, etc."""@fr ;
+	rdfs:range nature:Observation .

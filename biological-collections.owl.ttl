@@ -9,6 +9,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix vann: <http://purl.org/vocab/vann/>.
+@prefix nature: <http://deductions.github.io/nature_observation.owl.ttl#> .
 
 @prefix :     <http://deductions.github.io/biological-collections.owl.ttl#> .
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
@@ -85,4 +86,17 @@
 	rdfs:label "location"@en ;
 	rdfs:domain :BiologicalCollection ;
 	rdfs:range dbo:Settlement .
+
+
+:NativePlantIntroduction a owl:Class ; rdfs:subClassOf :Specimen, nature:Observation ;
+	rdfs:label "Introduction de Plante indigène"@fr ;
+	rdfs:label "Native Plant Introduction"@en ;
+	rdfs:comment """Une Plante indigène, de provenance régionale, en général dans un rayon de quelques kilomètres a été plantée.
+	""" .
+
+:geographicOrigin a owl:DatatypeProperty ;
+	rdfs:label "Origine géographique"@fr ;
+	rdfs:label "geographic Origin"@en ;
+	rdfs:domain :Specimen ;
+	rdfs:range geo:SpatialThing .
 
