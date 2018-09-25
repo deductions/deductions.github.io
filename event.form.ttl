@@ -6,17 +6,15 @@
 @prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
 @prefix schema: <http://schema.org/> .
 
-@prefix forms: <http://deductions.github.io/doas.owl.ttl#> .
-
 # Évènement, tel que concerts, festival de musique, fête des plantes, rassemblement; 
 # distinct d'une réunion
 # A mix of dbo:Event, schema:Event, event:Event
-forms:eventForm
+:eventForm
   a form:specification ;
   form:classDomain dbo:Event ;
   form:classDomain schema:Event ;
   form:classDomain event:Event ;
-  rdfs:label "Evènement"@fr ;
+  rdfs:label "Evènement form."@fr ;
   rdfs:label "Event form"@en ;
   form:showProperties (
     rdfs:label
