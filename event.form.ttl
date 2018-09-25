@@ -5,6 +5,7 @@
 @prefix dct:     <http://purl.org/dc/terms/> .
 @prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
 @prefix schema: <http://schema.org/> .
+@prefix : <> .
 
 # Évènement, tel que concerts, festival de musique, fête des plantes, rassemblement; 
 # distinct d'une réunion
@@ -31,8 +32,8 @@
     schema:attendee # (participant)
   ) .
 
-forms:eventForm-subject
-	form:fieldAppliesToForm forms:eventForm ;
+:eventForm-subject
+	form:fieldAppliesToForm :eventForm ;
 	form:fieldAppliesToProperty dct:subject ;
 	form:widgetClass form:DBPediaLookup .
 
