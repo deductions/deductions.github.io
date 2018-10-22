@@ -6,6 +6,7 @@
 @prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
 @prefix schema: <http://schema.org/> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 
 # Évènement, tel que concerts, festival de musique, fête des plantes, rassemblement; 
@@ -23,6 +24,7 @@
     rdfs:comment
     dbo:startDate
     event:place
+    foaf:homepage
     dct:subject
 
     event:agent
