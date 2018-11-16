@@ -40,4 +40,9 @@
 	form:fieldAppliesToProperty dct:subject ;
 	form:widgetClass form:DBPediaLookup .
 
-
+# Redefine a label for event:agent in form different from the one in ontology
+:agent--eventForm
+	form:fieldAppliesToForm :eventForm ;
+	form:fieldAppliesToProperty event:agent ;
+	form:label "organized by"@en ;
+	form:label "organisé par"@fr .
