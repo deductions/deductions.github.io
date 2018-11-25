@@ -7,6 +7,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
 @prefix : <> .
 
 # Évènement, tel que concerts, festival de musique, fête des plantes, rassemblement; 
@@ -23,16 +24,15 @@
     rdfs:label
     rdfs:comment
     dbo:startDate
+    # TODO: add property with range xsd:time (existing HTML5 support <input type="time" > )
     event:place
     foaf:homepage
     dct:subject
 
     event:agent
-    # programme (sous-évènement)
-    schema:subEvents
-    # programme (text riche)
-    sioc:content
-    schema:attendee # (participant)
+    schema:subEvents #	programme (sous-évènement)
+    sioc:content #	programme (texte riche)
+    con:participant
   ) .
 
 :eventForm-subject
