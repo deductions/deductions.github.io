@@ -8,7 +8,7 @@
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
-@prefix : <> .
+@prefix : <#> .
 
 # Évènement, tel que concerts, festival de musique, fête des plantes, rassemblement; 
 # distinct d'une réunion
