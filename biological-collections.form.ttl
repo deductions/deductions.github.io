@@ -32,7 +32,6 @@ bioc:form-Planting
     geo:alt
     dcterms:date
     foaf:depiction
-    rdfs:comment
     :deathDate
   ) .
 
@@ -67,7 +66,7 @@ bioc:form-BiologicalCollection-location
 :form-NativePlantIntroduction
   a form:specification ;
   rdfs:label "Observation form"@en ;
-  rdfs:label "formulaire Observation"@fr ;
+  rdfs:label "Formulaire Observation"@fr ;
   form:classDomain :NativePlantIntroduction ;
   form:showProperties (
     nature:taxon
@@ -80,3 +79,26 @@ bioc:form-BiologicalCollection-location
     nature:observation
     dcterms:date
  ) .
+
+bioc:form-Garden
+  a form:specification ;
+  rdfs:label "Garden form"@en ;
+  rdfs:label "Formulaire Jardin"@fr ;
+  form:classDomain dbo:Garden ;
+  form:showProperties (
+    rdfs:label
+    dcterms:subject
+    foaf:maker
+    dbo:information
+    dbo:areaLand
+    dbo:nearestCity
+    dbo:elevation
+    rdfs:comment
+    rdfs:seeAlso
+    dbo:flower
+    dbo:tree
+    geo:long
+    geo:lat
+  ) .
+
+
