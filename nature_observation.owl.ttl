@@ -23,8 +23,9 @@
 :Observation a owl:Class ;
 	rdfs:subClassOf event:Product ;
 	rdfs:label "Observation"@fr ;
-	rdfs:label "Observation"@en .
-:Observation form:labelProperty :taxon .
+	rdfs:label "Observation"@en ;
+	form:labelProperty :taxon .
+
 @base <https://deductions.github.io> .
 :Observation foaf:img <pest-observation.svg> .
 
@@ -39,3 +40,33 @@
 	rdfs:label "nature observation"@en ;
 	rdfs:comment """permet d'associer une observation à une transplantation, un article publié, etc."""@fr ;
 	rdfs:range nature:Observation .
+
+
+:FieldTrip a owl:Class ;
+	rdfs:subClassOf schema:Trip , schema:Event ;
+	rdfs:label "Excursion"@fr ;
+	rdfs:label "Field trip"@en .
+
+:departureTime a owl:DatatypeProperty ;
+	rdfs:label "heure de départ"@fr ;
+	rdfs:label "departure time"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range xsd:time .
+
+:arrivalTime a owl:DatatypeProperty ;
+	rdfs:label "heure d'arrivée"@fr ;
+	rdfs:label "arrival time"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range xsd:time .
+
+:returnStation a owl:ObjectProperty ;
+	rdfs:label "gare de retour"@fr ;
+	rdfs:label "return station"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range schema:TrainStation .
+
+:returnTime a owl:DatatypeProperty ;
+	rdfs:label "heure de retour"@fr ;
+	rdfs:label "return time"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range xsd:time .
