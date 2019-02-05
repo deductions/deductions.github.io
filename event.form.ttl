@@ -8,6 +8,8 @@
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix con: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <#> .
 
 # Évènement, tel que concerts, festival de musique, fête des plantes, rassemblement; 
@@ -24,7 +26,8 @@
     rdfs:label
     rdfs:comment
     dbo:startDate
-    # TODO: add property with range xsd:time (existing HTML5 support <input type="time" > )
+    # add property with range xsd:time (existing HTML5 support <input type="time" > )
+    :time
     event:place
     foaf:homepage
     dct:subject
@@ -34,6 +37,11 @@
     sioc:content #	programme (texte riche)
     con:participant
   ) .
+
+:time a owl:DatatypeProperty ;
+	rdfs:label "heure"@fr ;
+	rdfs:label "clock time"@en ;
+	rdfs:range xsd:time .
 
 :eventForm-subject
 	form:fieldAppliesToForm :eventForm ;
