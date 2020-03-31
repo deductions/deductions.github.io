@@ -30,6 +30,7 @@ bioc:form-Planting
     geo:long
     geo:lat
     geo:alt
+    dcterms:subject
     dcterms:date
     foaf:depiction
     :deathDate
@@ -55,6 +56,7 @@ bioc:form-BiologicalCollection
   form:showProperties (
   :location
   :manager
+  dcterms:subject
 ) .
 
 bioc:form-BiologicalCollection-location
@@ -94,6 +96,7 @@ bioc:form-Garden
     dbo:nearestCity
     dbo:elevation
     rdfs:comment
+    dcterms:subject
     rdfs:seeAlso
     dbo:flower
     dbo:tree
