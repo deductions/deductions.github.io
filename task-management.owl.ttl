@@ -29,7 +29,7 @@ tm:project a owl:ObjectProperty ;
 tm:state a owl:ObjectProperty ;
         rdfs:label "Etat"@fr ;
         rdfs:domain tm:Task  ;
-        rdfs:range [ owl:oneOf tm:TODO, tm:UnderWay, tm:DONE ] .
+        rdfs:range [ owl:oneOf (tm:TODO tm:UnderWay tm:DONE) ] .
 
 tm:TODO rdfs:label "A faire"@fr .
 tm:UnderWay rdfs:label "En cours"@fr .
