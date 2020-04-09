@@ -95,7 +95,7 @@
 	rdfs:comment """Une Plante indigène, de provenance régionale, en général dans un rayon de quelques kilomètres a été plantée.
 	""" .
 
-:geographicOrigin a owl:DatatypeProperty ;
+:geographicOrigin a owl:ObjectProperty ;
 	rdfs:label "Origine géographique"@fr ;
 	rdfs:label "geographic Origin"@en ;
 	rdfs:domain :Specimen ;
