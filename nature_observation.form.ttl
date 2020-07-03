@@ -32,14 +32,11 @@
     rdfs:comment
  ) .
 
-
-# comment out & rely on species dataset (e.g. taxref) being loaded in semantic_forms for completion
-
-# :form-BiologicalCollection-taxon
-#   rdfs:label "Observation - taxon détail"@fr ;
-# 	form:fieldAppliesToForm :form-Observation ;
-# 	form:fieldAppliesToProperty :taxon ;
-# 	form:widgetClass form:DBPediaLookup .
+:form-BiologicalCollection-taxon
+  rdfs:label "Observation - taxon détail"@fr ;
+	form:fieldAppliesToForm :form-Observation ;
+	form:fieldAppliesToProperty nature:taxon ;
+	form:widgetClass form:SPARQLvirtuosoLookup .
 
 # add this because SF does not yet process:
 # event:Product a owl:Class; owl:equivalentClass [ a owl:Restriction; owl:someValuesFrom event:Event; owl:onProperty event:produced_in ] .
