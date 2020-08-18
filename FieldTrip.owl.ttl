@@ -1,0 +1,45 @@
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+
+@prefix :       <http://deductions.github.io/FieldTrip.owl.ttl#> .
+
+# for "Naturalistes Parisiens" Events
+
+:FieldTrip a owl:Class ;
+	rdfs:subClassOf schema:Trip , schema:Event ;
+	rdfs:label "Excursion"@fr ;
+	rdfs:label "Field trip"@en .
+
+:departureTime a owl:DatatypeProperty ;
+	rdfs:label "heure de départ"@fr ;
+	rdfs:label "departure time"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range xsd:time .
+
+:arrivalTime a owl:DatatypeProperty ;
+	rdfs:label "heure d'arrivée"@fr ;
+	rdfs:label "arrival time"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range xsd:time .
+
+:returnStation a owl:ObjectProperty ;
+	rdfs:label "gare de retour"@fr ;
+	rdfs:label "return station"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range schema:TrainStation .
+
+:returnTime a owl:DatatypeProperty ;
+	rdfs:label "heure de retour"@fr ;
+	rdfs:label "return time"@en ;
+	rdfs:domain :FieldTrip ;
+	rdfs:range xsd:time .
