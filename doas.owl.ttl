@@ -106,3 +106,12 @@ doas:sandboxURL a owl:ObjectProperty ;
         rdfs:label    """un site web "bac à sable" propulsé par ce logiciel"""@fr ;
         rdfs:range    foaf:Document .
 
+doas:dataSource a owl:ObjectProperty ;
+        rdfs:domain   doas:Software ;
+        rdfs:label    "a data source used by this software"@en ;
+        rdfs:label    "une source de données utilisée par ce logiciel"@fr ;
+        rdfs:comment  "this property makes sense for web sites too; but maybe SF does not support OWL unions for rdfs:range"@en ;
+        rdfs:range    <http://www.w3.org/ns/dcat#Dataset> ,
+                      <http://dbpedia.org/ontology/Database> ,
+                      <http://www.wikidata.org/entity/Q1391125> .
+
