@@ -1,0 +1,61 @@
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dwci: <http://rs.tdwg.org/dwc/iri/> .
+@prefix dwc:  <http://rs.tdwg.org/dwc/terms/> .
+
+@prefix klf:       <http://deductions.github.io/karstlink.form.ttl#> .
+@prefix karstlink: <http://deductions.github.io/karstlink.owl.ttl#> .
+
+klf:form-UndergroundCavity
+  a form:specification ;
+  rdfs:label "Underground Cavity form"@en ;
+  rdfs:label "formulaire Cavité"@fr ;
+  rdfs:seeAlso <http://uisic.uis-speleo.org/wiki/karstlink/index.php?title=Underground_cavity_-_Cavité> ;
+  form:classDomain karstlink:UndergroundCavity ;
+  form:showProperties (
+    rdfs:label
+    dct:creator
+    dct:description
+    dct:hasPart
+
+    geo:long
+    geo:lat
+    geo:alt
+
+    dwci:inDescribedPlace
+    # dwc:municipality
+    dwci:toTaxon
+    dcterms:date
+
+    karstlink:extentAboveEntrance	
+    karstlink:extentBelowEntrance
+
+    rdfs:comment
+    rdfs:seeAlso
+ ) .
+
+klf:form-UndergroundCavity-taxon
+  rdfs:label "Cavité - taxon détail"@fr ;
+	form:fieldAppliesToForm klf:form-UndergroundCavity ;
+	form:fieldAppliesToProperty dwci:toTaxon ;
+	form:widgetClass form:SPARQLvirtuosoLookup .
+
+klf:form-UndergroundCavity-place
+  rdfs:label "Cavité - lieu détail"@fr ;
+  form:fieldAppliesToForm klf:form-UndergroundCavity ;
+  form:fieldAppliesToProperty dwci:inDescribedPlace ;
+  form:widgetClass form:DBPediaLookup .
+
+# occurrenceId,family,genus,specificEpithet,scientificName,municipality,locality,eventDate,recordedBy
+# nom_domaine_geographique, nom_reseau, nom_pays, nom_departement, nom_commune, nom_cavite, id_cavite, nom_taxon, rang
