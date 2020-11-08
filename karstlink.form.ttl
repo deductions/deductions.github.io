@@ -15,7 +15,7 @@
 @prefix dwc:  <http://rs.tdwg.org/dwc/terms/> .
 
 @prefix klf:       <http://deductions.github.io/karstlink.form.ttl#> .
-@prefix karstlink: <http://deductions.github.io/karstlink.owl.ttl#> .
+@prefix karstlink: <https://ontology.uis-speleo.org/ontology/#> .
 
 klf:form-UndergroundCavity
   a form:specification ;
