@@ -4,10 +4,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix dct: <http://purl.org/dc/terms/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 
 <#> dct:description """
-Additions to external vocabularies that should be present in DWC;
+Additions to vocabulary that should be present in DWC;
 useful for building UI and checking SPARQL databases.
 """ ;
 dct:hasPart 
@@ -15,11 +16,17 @@ dwc:eventDate , dwc:coordinatePrecision , dwc:associatedTaxa , dwc:associatedTax
 dwciri:inDescribedPlace , dwciri:recordedBy , dwciri:identifiedBy
 .
 
-dwc:eventDate rdfs:range xsd:date .
-dwc:coordinatePrecision rdfs:range xsd:decimal .
-dwc:associatedTaxa rdfs:range xsd:string .
+dwc:eventDate a owl:DatatypeProperty ;
+  rdfs:range xsd:date .
+dwc:coordinatePrecision a owl:DatatypeProperty ;
+  rdfs:range xsd:decimal .
+dwc:associatedTaxa a owl:DatatypeProperty ;
+  rdfs:range xsd:string .
 
-dwciri:inDescribedPlace rdfs:range dct:Location . 
-dwciri:recordedBy rdfs:range foaf:Agent .
-dwciri:identifiedBy rdfs:range foaf:Agent .
+dwciri:inDescribedPlace a owl:ObjectProperty ;
+  rdfs:range dct:Location .
+dwciri:recordedBy a owl:ObjectProperty ;
+  rdfs:range foaf:Agent .
+dwciri:identifiedBy a owl:ObjectProperty ;
+  rdfs:range foaf:Agent .
 
