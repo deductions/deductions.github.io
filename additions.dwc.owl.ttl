@@ -12,16 +12,23 @@ Additions to vocabulary that should be present in DWC;
 useful for building UI and checking SPARQL databases.
 """ ;
 dct:hasPart 
-dwc:eventDate , dwc:coordinatePrecision , dwc:associatedTaxa , dwc:associatedTaxa ,
+dwc:eventDate , dwc:dateIdentified , dwc:coordinatePrecision , dwc:associatedTaxa , dwc:associatedTaxa ,
+dwc:recordedBy , dwc:identifiedBy ,
 dwciri:inDescribedPlace , dwciri:recordedBy , dwciri:identifiedBy
 .
 
 dwc:eventDate a owl:DatatypeProperty ;
   rdfs:range xsd:date .
+dwc:dateIdentified a owl:DatatypeProperty ;
+  rdfs:range xsd:date .
 dwc:coordinatePrecision a owl:DatatypeProperty ;
   rdfs:range xsd:decimal .
 dwc:associatedTaxa a owl:DatatypeProperty ;
   rdfs:range xsd:string .
+dwc:individualCount a owl:DatatypeProperty ;
+  rdfs:range xsd:integer .
+dwc:recordedBy a owl:DatatypeProperty .
+dwc:identifiedBy a owl:DatatypeProperty .
 
 dwciri:inDescribedPlace a owl:ObjectProperty ;
   rdfs:range dct:Location .
