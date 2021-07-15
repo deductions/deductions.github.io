@@ -33,11 +33,11 @@ seeds:form-PlantOffering
   rdfs:label "Offre de Plante"@fr ;
   form:classDomain seeds:PlantOffering ;
   form:showProperties (
-    :species
+    bioc:species
     dbo:cultivatedVariety
-    :acquisitionDate
-    :provenance
-    :inCollection
+    bioc:acquisitionDate
+    bioc:provenance
+    bioc:inCollection
     rdfs:comment
     rdfs:seeAlso
     dcterms:subject
