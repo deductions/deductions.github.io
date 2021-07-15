@@ -1,5 +1,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+
 @prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix bioc: <http://deductions.github.io/biological-collections.owl.ttl#> .
 
@@ -23,6 +26,25 @@ seeds:form-SeedsBatch
     :sharingMode
     rdfs:comment
   ) .
+
+seeds:form-PlantOffering
+  a form:specification ;
+  rdfs:label "Plant Offering"@en ;
+  rdfs:label "Offre de Plante"@fr ;
+  form:classDomain seeds:PlantOffering ;
+  form:showProperties (
+    :species
+    dbo:cultivatedVariety
+    :acquisitionDate
+    :provenance
+    :inCollection
+    rdfs:comment
+    rdfs:seeAlso
+    dcterms:subject
+    dcterms:date
+    foaf:depiction
+  ) .
+
 
 seeds:form-SeedsBatch-species
   rdfs:label "lot de graines - espèce détail"@fr ;
