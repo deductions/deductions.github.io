@@ -48,8 +48,9 @@
 :species a owl:ObjectProperty ;
 	rdfs:label "espèce"@fr ;
 	rdfs:label "species"@en ;
-	rdfs:domain :Specimen ;
-	rdfs:range dbo:Species .
+	rdfs:domain :Specimen
+	# ; rdfs:range dbo:Species
+	.
 
 :provenance a owl:ObjectProperty ;
 	rdfs:label "provenance"@fr ;
