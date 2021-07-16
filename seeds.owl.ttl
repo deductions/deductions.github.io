@@ -15,11 +15,13 @@
 	rdfs:label "Vocabulary for exchange of seeds, plants, etc"@en .
 
 :PlantOffering a owl:Class ;
+  rdfs:subClassOf bioc:Specimen ;
   rdfs:label "Offre de plante"@fr ;
-  rdfs:label "Plant offering"@en .
+  rdfs:label "Plant offering"@en   ;
+  form:labelProperty bioc:species.
 
 :SeedsBatch a owl:Class ;
-  rdfs:subClassOf bioc:Specimen , :PlantOffering;
+  rdfs:subClassOf :PlantOffering;
   rdfs:label "Lot de graines"@fr ;
   rdfs:label ""@en ;
   rdfs:comment """
